@@ -10856,9 +10856,11 @@ header.masthead:before {
   left: 0;
   opacity: 0.5;
 }
-header.masthead h1, header.masthead .h1 {
-  font-size: 2rem;
+
+.mb-4 {
+  padding: 3rem;
 }
+
 @media (min-width: 768px) {
   header.masthead {
     padding-top: 12rem;
