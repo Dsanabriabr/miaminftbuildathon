@@ -10896,6 +10896,23 @@ header.masthead:before {
   box-shadow: 0px 5px 5px 0px #adb5bd;
 }
 
+.call-to-action-small {
+  position: relative;
+  background-color: #343a40;
+  padding-bottom: 1rem;
+}
+
+.call-to-action-small:before {
+  content: "";
+  position: absolute;
+  background-color: #1c375e;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+}
+
 .call-to-action {
   position: relative;
   background-color: #343a40;
