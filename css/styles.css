@@ -10857,8 +10857,13 @@ header.masthead:before {
   opacity: 0.5;
 }
 
-.mb-4 {
+.intro {
   padding: 3rem;
+}
+
+.specs {
+  padding: 3rem;
+  padding-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -10899,6 +10904,7 @@ header.masthead:before {
 .call-to-action-small {
   position: relative;
   background-color: #343a40;
+  padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
