@@ -10841,7 +10841,7 @@ textarea.form-control-lg {
 header.masthead {
   position: relative;
   background-color: #343a40;
-  background: url("../assets/img/bg-masthead.jpg") no-repeat center center;
+  background: url("../assets/img/bg-masthead.png") no-repeat center center;
   background-size: cover;
   padding-top: 8rem;
   padding-bottom: 8rem;
@@ -10882,7 +10882,6 @@ header.masthead:before {
 .showcase .showcase-img {
   min-height: 30rem;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 @media (min-width: 768px) {
   .showcase .showcase-text {
