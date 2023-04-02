@@ -10911,7 +10911,7 @@ header.masthead:before {
 .call-to-action-small:before {
   content: "";
   position: absolute;
-  background-color: #1c375e;
+  background-color: #624b7a;
   height: 100%;
   width: 100%;
   top: 0;
@@ -10921,7 +10921,7 @@ header.masthead:before {
 
 .call-to-action {
   position: relative;
-  background-color: #343a40;
+  background-color: #624b7a;
   background: url("../assets/img/bg-masthead.jpg") no-repeat center center;
   background-size: cover;
   padding-top: 7rem;
@@ -10930,7 +10930,7 @@ header.masthead:before {
 .call-to-action:before {
   content: "";
   position: absolute;
-  background-color: #1c375e;
+  background-color: #624b7a;
   height: 100%;
   width: 100%;
   top: 0;
