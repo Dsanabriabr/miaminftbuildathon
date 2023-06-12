@@ -1,0 +1,126 @@
+@font-face {
+  font-family: 'Lorin';
+  src: url(/fonts/Lorin-Regular.ttf);
+}
+@font-face {
+  font-family: 'Brandon Grotesque';
+  src: url(/fonts/Brandon-Grotesque-Light.otf);
+}
+
+:root {
+  /* font size */
+  --fs-sm: clamp(0.83rem, calc(0.78rem + 0.26vw), 0.97rem);
+  --fs-md: clamp(1.00rem, calc(0.86rem + 0.71vw), 1.38rem);
+  --fs-lg: clamp(1.44rem, calc(0.95rem + 2.46vw), 2.75rem);
+  --fs-xl: clamp(1.73rem, calc(0.92rem + 4.06vw), 3.89rem);
+  --fs-xxl: clamp(1.87rem, calc(1.2rem + 4.12vw), 4rem);
+  /* colors */
+  --clr-body: rgba(48, 61, 83, .7);
+  --clr-head: #283249;
+  --clr-bg: #f6f9fc;
+  --clr-primary: #0084b4;
+  --clr-secondary: #1dcaff;
+  --clr-tertiary: #c0deed;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--clr-primary);
+}
+::-webkit-scrollbar-track {
+  background: #f4f4f4;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+body {
+  font-family: 'Lorin', sans-serif;
+  font-size: var(--fs-md);
+  color: var(--clr-body);
+  line-height: 1.2;
+}
+img {
+  max-width: 100%;
+}
+h2 {
+  font-weight: 700;
+  font-size: var(--fs-lg);
+  color: var(--clr-head);
+}
+a {
+  color: var(--clr-tertiary);
+}
+a:hover {
+  color: var(--clr-primary);
+}
+header .wrapper,
+footer .wrapper,
+section > .wrapper {
+  width: 1170px;
+  max-width: 100%;
+  padding-inline: var(--fs-md);
+  margin-inline: auto;
+}
+header .wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 0;
+}
+@media screen and (min-width: 767px) {
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.column {
+  flex: 1;;
+}
+.social {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin-inline: 0;
+  padding-inline: 0;
+}
+.social a:not(:hover) img {
+  filter: grayscale();
+}
+/* utility */
+.fs-s {
+  font-size: .5em;
+}
+.tt-uc {
+  text-transform: uppercase;
+}
+.clr-n {
+  color: var(--clr-body);
+}
+.clr-p {
+  color: var(--clr-primary);
+}
+.button {
+  background: linear-gradient(21deg, var(--clr-primary), var(--clr-secondary));
+  display: inline-block;
+  padding: 1em;
+  border-radius: .5em;
+  color: #fff;
+  text-decoration: none;
+  transform: scale(1);
+  transition: .2s;
+}
+.button:hover {
+  transform: scale(1.05);
+  color: #fff;
+}

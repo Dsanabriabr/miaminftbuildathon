@@ -1,377 +1,1723 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script> 
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Boat Head Yatch Club</title>
-    <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <!-- Bootstrap icons-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet"
-        type="text/css" />
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
-        type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- <style id="swiper-element-styles">
+        @font-face {
+            font-family: swiper-icons;
+            src: url('data:application/font-woff;charset=utf-8;base64, d09GRgABAAAAAAZgABAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAGRAAAABoAAAAci6qHkUdERUYAAAWgAAAAIwAAACQAYABXR1BPUwAABhQAAAAuAAAANuAY7+xHU1VCAAAFxAAAAFAAAABm2fPczU9TLzIAAAHcAAAASgAAAGBP9V5RY21hcAAAAkQAAACIAAABYt6F0cBjdnQgAAACzAAAAAQAAAAEABEBRGdhc3AAAAWYAAAACAAAAAj//wADZ2x5ZgAAAywAAADMAAAD2MHtryVoZWFkAAABbAAAADAAAAA2E2+eoWhoZWEAAAGcAAAAHwAAACQC9gDzaG10eAAAAigAAAAZAAAArgJkABFsb2NhAAAC0AAAAFoAAABaFQAUGG1heHAAAAG8AAAAHwAAACAAcABAbmFtZQAAA/gAAAE5AAACXvFdBwlwb3N0AAAFNAAAAGIAAACE5s74hXjaY2BkYGAAYpf5Hu/j+W2+MnAzMYDAzaX6QjD6/4//Bxj5GA8AuRwMYGkAPywL13jaY2BkYGA88P8Agx4j+/8fQDYfA1AEBWgDAIB2BOoAeNpjYGRgYNBh4GdgYgABEMnIABJzYNADCQAACWgAsQB42mNgYfzCOIGBlYGB0YcxjYGBwR1Kf2WQZGhhYGBiYGVmgAFGBiQQkOaawtDAoMBQxXjg/wEGPcYDDA4wNUA2CCgwsAAAO4EL6gAAeNpj2M0gyAACqxgGNWBkZ2D4/wMA+xkDdgAAAHjaY2BgYGaAYBkGRgYQiAHyGMF8FgYHIM3DwMHABGQrMOgyWDLEM1T9/w8UBfEMgLzE////P/5//f/V/xv+r4eaAAeMbAxwIUYmIMHEgKYAYjUcsDAwsLKxc3BycfPw8jEQA/gZBASFhEVExcQlJKWkZWTl5BUUlZRVVNXUNTQZBgMAAMR+E+gAEQFEAAAAKgAqACoANAA+AEgAUgBcAGYAcAB6AIQAjgCYAKIArAC2AMAAygDUAN4A6ADyAPwBBgEQARoBJAEuATgBQgFMAVYBYAFqAXQBfgGIAZIBnAGmAbIBzgHsAAB42u2NMQ6CUAyGW568x9AneYYgm4MJbhKFaExIOAVX8ApewSt4Bic4AfeAid3VOBixDxfPYEza5O+Xfi04YADggiUIULCuEJK8VhO4bSvpdnktHI5QCYtdi2sl8ZnXaHlqUrNKzdKcT8cjlq+rwZSvIVczNiezsfnP/uznmfPFBNODM2K7MTQ45YEAZqGP81AmGGcF3iPqOop0r1SPTaTbVkfUe4HXj97wYE+yNwWYxwWu4v1ugWHgo3S1XdZEVqWM7ET0cfnLGxWfkgR42o2PvWrDMBSFj/IHLaF0zKjRgdiVMwScNRAoWUoH78Y2icB/yIY09An6AH2Bdu/UB+yxopYshQiEvnvu0dURgDt8QeC8PDw7Fpji3fEA4z/PEJ6YOB5hKh4dj3EvXhxPqH/SKUY3rJ7srZ4FZnh1PMAtPhwP6fl2PMJMPDgeQ4rY8YT6Gzao0eAEA409DuggmTnFnOcSCiEiLMgxCiTI6Cq5DZUd3Qmp10vO0LaLTd2cjN4fOumlc7lUYbSQcZFkutRG7g6JKZKy0RmdLY680CDnEJ+UMkpFFe1RN7nxdVpXrC4aTtnaurOnYercZg2YVmLN/d/gczfEimrE/fs/bOuq29Zmn8tloORaXgZgGa78yO9/cnXm2BpaGvq25Dv9S4E9+5SIc9PqupJKhYFSSl47+Qcr1mYNAAAAeNptw0cKwkAAAMDZJA8Q7OUJvkLsPfZ6zFVERPy8qHh2YER+3i/BP83vIBLLySsoKimrqKqpa2hp6+jq6RsYGhmbmJqZSy0sraxtbO3sHRydnEMU4uR6yx7JJXveP7WrDycAAAAAAAH//wACeNpjYGRgYOABYhkgZgJCZgZNBkYGLQZtIJsFLMYAAAw3ALgAeNolizEKgDAQBCchRbC2sFER0YD6qVQiBCv/H9ezGI6Z5XBAw8CBK/m5iQQVauVbXLnOrMZv2oLdKFa8Pjuru2hJzGabmOSLzNMzvutpB3N42mNgZGBg4GKQYzBhYMxJLMlj4GBgAYow/P/PAJJhLM6sSoWKfWCAAwDAjgbRAAB42mNgYGBkAIIbCZo5IPrmUn0hGA0AO8EFTQAA');
+            font-weight: 400;
+            font-style: normal
+        }
+
+        :root {
+            --swiper-theme-color: #007aff
+        }
+
+        .swiper,
+        swiper-container {
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            overflow: hidden;
+            list-style: none;
+            padding: 0;
+            z-index: 1;
+            display: block
+        }
+
+        :host(.swiper-vertical)>.swiper-wrapper {
+            flex-direction: column
+        }
+
+        .swiper-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            display: flex;
+            transition-property: transform;
+            transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
+            box-sizing: content-box
+        }
+
+        .swiper-android swiper-slide,
+        .swiper-wrapper {
+            transform: translate3d(0px, 0, 0)
+        }
+
+        .swiper-horizontal {
+            touch-action: pan-y
+        }
+
+        .swiper-vertical {
+            touch-action: pan-x
+        }
+
+        swiper-slide {
+            flex-shrink: 0;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transition-property: transform;
+            display: block
+        }
+
+        .swiper-slide-invisible-blank {
+            visibility: hidden
+        }
+
+        .swiper-autoheight,
+        .swiper-autoheight swiper-slide {
+            height: auto
+        }
+
+        :host(.swiper-autoheight) .swiper-wrapper {
+            align-items: flex-start;
+            transition-property: transform, height
+        }
+
+        .swiper-backface-hidden swiper-slide {
+            transform: translateZ(0);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden
+        }
+
+        :host(.swiper-3d.swiper-css-mode) .swiper-wrapper {
+            perspective: 1200px
+        }
+
+        :host(.swiper-3d) .swiper-wrapper {
+            transform-style: preserve-3d
+        }
+
+        .swiper-3d {
+            perspective: 1200px
+        }
+
+        .swiper-3d .swiper-cube-shadow,
+        .swiper-3d .swiper-slide-shadow,
+        .swiper-3d .swiper-slide-shadow-bottom,
+        .swiper-3d .swiper-slide-shadow-left,
+        .swiper-3d .swiper-slide-shadow-right,
+        .swiper-3d .swiper-slide-shadow-top,
+        .swiper-3d swiper-slide {
+            transform-style: preserve-3d
+        }
+
+        .swiper-3d .swiper-slide-shadow,
+        .swiper-3d .swiper-slide-shadow-bottom,
+        .swiper-3d .swiper-slide-shadow-left,
+        .swiper-3d .swiper-slide-shadow-right,
+        .swiper-3d .swiper-slide-shadow-top {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 10
+        }
+
+        .swiper-3d .swiper-slide-shadow {
+            background: rgba(0, 0, 0, .15)
+        }
+
+        .swiper-3d .swiper-slide-shadow-left {
+            background-image: linear-gradient(to left, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0))
+        }
+
+        .swiper-3d .swiper-slide-shadow-right {
+            background-image: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0))
+        }
+
+        .swiper-3d .swiper-slide-shadow-top {
+            background-image: linear-gradient(to top, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0))
+        }
+
+        .swiper-3d .swiper-slide-shadow-bottom {
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0))
+        }
+
+        :host(.swiper-css-mode)>.swiper-wrapper {
+            overflow: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none
+        }
+
+        :host(.swiper-css-mode)>.swiper-wrapper::-webkit-scrollbar {
+            display: none
+        }
+
+        .swiper-css-mode>swiper-slide {
+            scroll-snap-align: start start
+        }
+
+        :host(.swiper-horizontal.swiper-css-mode)>.swiper-wrapper {
+            scroll-snap-type: x mandatory
+        }
+
+        :host(.swiper-vertical.swiper-css-mode)>.swiper-wrapper {
+            scroll-snap-type: y mandatory
+        }
+
+        :host(.swiper-centered)>.swiper-wrapper::before {
+            content: '';
+            flex-shrink: 0;
+            order: 9999
+        }
+
+        .swiper-centered>swiper-slide {
+            scroll-snap-align: center center;
+            scroll-snap-stop: always
+        }
+
+        .swiper-centered.swiper-horizontal>swiper-slide:first-child {
+            margin-inline-start: var(--swiper-centered-offset-before)
+        }
+
+        :host(.swiper-centered.swiper-horizontal)>.swiper-wrapper::before {
+            height: 100%;
+            min-height: 1px;
+            width: var(--swiper-centered-offset-after)
+        }
+
+        .swiper-centered.swiper-vertical>swiper-slide:first-child {
+            margin-block-start: var(--swiper-centered-offset-before)
+        }
+
+        :host(.swiper-centered.swiper-vertical)>.swiper-wrapper::before {
+            width: 100%;
+            min-width: 1px;
+            height: var(--swiper-centered-offset-after)
+        }
+
+        .swiper-lazy-preloader {
+            width: 42px;
+            height: 42px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -21px;
+            margin-top: -21px;
+            z-index: 10;
+            transform-origin: 50%;
+            box-sizing: border-box;
+            border: 4px solid var(--swiper-preloader-color, var(--swiper-theme-color));
+            border-radius: 50%;
+            border-top-color: transparent
+        }
+
+        .swiper-watch-progress .swiper-slide-visible .swiper-lazy-preloader,
+        .swiper:not(.swiper-watch-progress) .swiper-lazy-preloader,
+        swiper-container:not(.swiper-watch-progress) .swiper-lazy-preloader {
+            animation: swiper-preloader-spin 1s infinite linear
+        }
+
+        .swiper-lazy-preloader-white {
+            --swiper-preloader-color: #fff
+        }
+
+        .swiper-lazy-preloader-black {
+            --swiper-preloader-color: #000
+        }
+
+        @keyframes swiper-preloader-spin {
+            0% {
+                transform: rotate(0deg)
+            }
+
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+
+        .swiper-virtual swiper-slide {
+            -webkit-backface-visibility: hidden;
+            transform: translateZ(0)
+        }
+
+        :host(.swiper-virtual.swiper-css-mode) .swiper-wrapper::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            pointer-events: none
+        }
+
+        :host(.swiper-virtual.swiper-css-mode.swiper-horizontal) .swiper-wrapper::after {
+            height: 1px;
+            width: var(--swiper-virtual-size)
+        }
+
+        :host(.swiper-virtual.swiper-css-mode.swiper-vertical) .swiper-wrapper::after {
+            width: 1px;
+            height: var(--swiper-virtual-size)
+        }
+
+        :root {
+            --swiper-navigation-size: 44px
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            position: absolute;
+            top: var(--swiper-navigation-top-offset, 50%);
+            width: calc(var(--swiper-navigation-size)/ 44 * 27);
+            height: var(--swiper-navigation-size);
+            margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+            z-index: 10;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--swiper-navigation-color, var(--swiper-theme-color))
+        }
+
+        .swiper-button-next.swiper-button-disabled,
+        .swiper-button-prev.swiper-button-disabled {
+            opacity: .35;
+            cursor: auto;
+            pointer-events: none
+        }
+
+        .swiper-button-next.swiper-button-hidden,
+        .swiper-button-prev.swiper-button-hidden {
+            opacity: 0;
+            cursor: auto;
+            pointer-events: none
+        }
+
+        .swiper-navigation-disabled .swiper-button-next,
+        .swiper-navigation-disabled .swiper-button-prev {
+            display: none !important
+        }
+
+        .swiper-button-next:after,
+        .swiper-button-prev:after {
+            font-family: swiper-icons;
+            font-size: var(--swiper-navigation-size);
+            text-transform: none !important;
+            letter-spacing: 0;
+            font-variant: initial;
+            line-height: 1
+        }
+
+        .swiper-button-prev,
+        :host(.swiper-rtl) .swiper-button-next {
+            left: var(--swiper-navigation-sides-offset, 10px);
+            right: auto
+        }
+
+        .swiper-button-prev:after,
+        :host(.swiper-rtl) .swiper-button-next:after {
+            content: 'prev'
+        }
+
+        .swiper-button-next,
+        :host(.swiper-rtl) .swiper-button-prev {
+            right: var(--swiper-navigation-sides-offset, 10px);
+            left: auto
+        }
+
+        .swiper-button-next:after,
+        :host(.swiper-rtl) .swiper-button-prev:after {
+            content: 'next'
+        }
+
+        .swiper-button-lock {
+            display: none
+        }
+
+        .swiper-pagination {
+            position: absolute;
+            text-align: center;
+            transition: .3s opacity;
+            transform: translate3d(0, 0, 0);
+            z-index: 10
+        }
+
+        .swiper-pagination.swiper-pagination-hidden {
+            opacity: 0
+        }
+
+        .swiper-pagination-disabled>.swiper-pagination,
+        .swiper-pagination.swiper-pagination-disabled {
+            display: none !important
+        }
+
+        .swiper-horizontal>.swiper-pagination-bullets,
+        .swiper-pagination-bullets.swiper-pagination-horizontal,
+        .swiper-pagination-custom,
+        .swiper-pagination-fraction {
+            bottom: var(--swiper-pagination-bottom, 8px);
+            top: var(--swiper-pagination-top, auto);
+            left: 0;
+            width: 100%
+        }
+
+        .swiper-pagination-bullets-dynamic {
+            overflow: hidden;
+            font-size: 0
+        }
+
+        .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+            transform: scale(.33);
+            position: relative
+        }
+
+        .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active {
+            transform: scale(1)
+        }
+
+        .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
+            transform: scale(1)
+        }
+
+        .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev {
+            transform: scale(.66)
+        }
+
+        .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {
+            transform: scale(.33)
+        }
+
+        .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {
+            transform: scale(.66)
+        }
+
+        .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {
+            transform: scale(.33)
+        }
+
+        .swiper-pagination-bullet {
+            width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 8px));
+            height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 8px));
+            display: inline-block;
+            border-radius: 50%;
+            background: var(--swiper-pagination-bullet-inactive-color, #000);
+            opacity: var(--swiper-pagination-bullet-inactive-opacity, .2)
+        }
+
+        button.swiper-pagination-bullet {
+            border: none;
+            margin: 0;
+            padding: 0;
+            box-shadow: none;
+            -webkit-appearance: none;
+            appearance: none
+        }
+
+        .swiper-pagination-clickable .swiper-pagination-bullet {
+            cursor: pointer
+        }
+
+        .swiper-pagination-bullet:only-child {
+            display: none !important
+        }
+
+        .swiper-pagination-bullet-active {
+            opacity: var(--swiper-pagination-bullet-opacity, 1);
+            background: var(--swiper-pagination-color, var(--swiper-theme-color))
+        }
+
+        .swiper-pagination-vertical.swiper-pagination-bullets,
+        .swiper-vertical>.swiper-pagination-bullets {
+            right: var(--swiper-pagination-right, 8px);
+            left: var(--swiper-pagination-left, auto);
+            top: 50%;
+            transform: translate3d(0px, -50%, 0)
+        }
+
+        .swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet,
+        .swiper-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
+            margin: var(--swiper-pagination-bullet-vertical-gap, 6px) 0;
+            display: block
+        }
+
+        .swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+        .swiper-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px
+        }
+
+        .swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,
+        .swiper-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+            display: inline-block;
+            transition: .2s transform, .2s top
+        }
+
+        .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+        .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+            margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px)
+        }
+
+        .swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+        .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap
+        }
+
+        .swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,
+        .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+            transition: .2s transform, .2s left
+        }
+
+        .swiper-horizontal.swiper-rtl>.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,
+        :host(.swiper-horizontal.swiper-rtl) .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+            transition: .2s transform, .2s right
+        }
+
+        .swiper-pagination-fraction {
+            color: var(--swiper-pagination-fraction-color, inherit)
+        }
+
+        .swiper-pagination-progressbar {
+            background: var(--swiper-pagination-progressbar-bg-color, rgba(0, 0, 0, .25));
+            position: absolute
+        }
+
+        .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+            background: var(--swiper-pagination-color, var(--swiper-theme-color));
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            transform: scale(0);
+            transform-origin: left top
+        }
+
+        :host(.swiper-rtl) .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+            transform-origin: right top
+        }
+
+        .swiper-horizontal>.swiper-pagination-progressbar,
+        .swiper-pagination-progressbar.swiper-pagination-horizontal,
+        .swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,
+        .swiper-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+            width: 100%;
+            height: var(--swiper-pagination-progressbar-size, 4px);
+            left: 0;
+            top: 0
+        }
+
+        .swiper-horizontal>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite,
+        .swiper-pagination-progressbar.swiper-pagination-horizontal.swiper-pagination-progressbar-opposite,
+        .swiper-pagination-progressbar.swiper-pagination-vertical,
+        .swiper-vertical>.swiper-pagination-progressbar {
+            width: var(--swiper-pagination-progressbar-size, 4px);
+            height: 100%;
+            left: 0;
+            top: 0
+        }
+
+        .swiper-pagination-lock {
+            display: none
+        }
+
+        .swiper-scrollbar {
+            border-radius: var(--swiper-scrollbar-border-radius, 10px);
+            position: relative;
+            -ms-touch-action: none;
+            background: var(--swiper-scrollbar-bg-color, rgba(0, 0, 0, .1))
+        }
+
+        .swiper-scrollbar-disabled>.swiper-scrollbar,
+        .swiper-scrollbar.swiper-scrollbar-disabled {
+            display: none !important
+        }
+
+        .swiper-horizontal>.swiper-scrollbar,
+        .swiper-scrollbar.swiper-scrollbar-horizontal {
+            position: absolute;
+            left: var(--swiper-scrollbar-sides-offset, 1%);
+            bottom: var(--swiper-scrollbar-bottom, 4px);
+            top: var(--swiper-scrollbar-top, auto);
+            z-index: 50;
+            height: var(--swiper-scrollbar-size, 4px);
+            width: calc(100% - 2 * var(--swiper-scrollbar-sides-offset, 1%))
+        }
+
+        .swiper-scrollbar.swiper-scrollbar-vertical,
+        .swiper-vertical>.swiper-scrollbar {
+            position: absolute;
+            left: var(--swiper-scrollbar-left, auto);
+            right: var(--swiper-scrollbar-right, 4px);
+            top: var(--swiper-scrollbar-sides-offset, 1%);
+            z-index: 50;
+            width: var(--swiper-scrollbar-size, 4px);
+            height: calc(100% - 2 * var(--swiper-scrollbar-sides-offset, 1%))
+        }
+
+        .swiper-scrollbar-drag {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            background: var(--swiper-scrollbar-drag-bg-color, rgba(0, 0, 0, .5));
+            border-radius: var(--swiper-scrollbar-border-radius, 10px);
+            left: 0;
+            top: 0
+        }
+
+        .swiper-scrollbar-cursor-drag {
+            cursor: move
+        }
+
+        .swiper-scrollbar-lock {
+            display: none
+        }
+
+        .swiper-zoom-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center
+        }
+
+        .swiper-zoom-container>canvas,
+        .swiper-zoom-container>img,
+        .swiper-zoom-container>svg {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain
+        }
+
+        .swiper-slide-zoomed {
+            cursor: move;
+            touch-action: none
+        }
+
+        .swiper .swiper-notification,
+        swiper-container .swiper-notification {
+            position: absolute;
+            left: 0;
+            top: 0;
+            pointer-events: none;
+            opacity: 0;
+            z-index: -1000
+        }
+
+        :host(.swiper-free-mode)>.swiper-wrapper {
+            transition-timing-function: ease-out;
+            margin: 0 auto
+        }
+
+        :host(.swiper-grid)>.swiper-wrapper {
+            flex-wrap: wrap
+        }
+
+        :host(.swiper-grid-column)>.swiper-wrapper {
+            flex-wrap: wrap;
+            flex-direction: column
+        }
+
+        .swiper-fade.swiper-free-mode swiper-slide {
+            transition-timing-function: ease-out
+        }
+
+        .swiper-fade swiper-slide {
+            pointer-events: none;
+            transition-property: opacity
+        }
+
+        .swiper-fade swiper-slide swiper-slide {
+            pointer-events: none
+        }
+
+        .swiper-fade .swiper-slide-active,
+        .swiper-fade .swiper-slide-active .swiper-slide-active {
+            pointer-events: auto
+        }
+
+        .swiper-cube {
+            overflow: visible
+        }
+
+        .swiper-cube swiper-slide {
+            pointer-events: none;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            z-index: 1;
+            visibility: hidden;
+            transform-origin: 0 0;
+            width: 100%;
+            height: 100%
+        }
+
+        .swiper-cube swiper-slide swiper-slide {
+            pointer-events: none
+        }
+
+        .swiper-cube.swiper-rtl swiper-slide {
+            transform-origin: 100% 0
+        }
+
+        .swiper-cube .swiper-slide-active,
+        .swiper-cube .swiper-slide-active .swiper-slide-active {
+            pointer-events: auto
+        }
+
+        .swiper-cube .swiper-slide-active,
+        .swiper-cube .swiper-slide-next,
+        .swiper-cube .swiper-slide-prev,
+        .swiper-cube swiper-slide-next+swiper-slide {
+            pointer-events: auto;
+            visibility: visible
+        }
+
+        .swiper-cube .swiper-slide-shadow-bottom,
+        .swiper-cube .swiper-slide-shadow-left,
+        .swiper-cube .swiper-slide-shadow-right,
+        .swiper-cube .swiper-slide-shadow-top {
+            z-index: 0;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden
+        }
+
+        .swiper-cube .swiper-cube-shadow {
+            position: absolute;
+            left: 0;
+            bottom: 0px;
+            width: 100%;
+            height: 100%;
+            opacity: .6;
+            z-index: 0
+        }
+
+        .swiper-cube .swiper-cube-shadow:before {
+            content: '';
+            background: #000;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            filter: blur(50px)
+        }
+
+        .swiper-flip {
+            overflow: visible
+        }
+
+        .swiper-flip swiper-slide {
+            pointer-events: none;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            z-index: 1
+        }
+
+        .swiper-flip swiper-slide swiper-slide {
+            pointer-events: none
+        }
+
+        .swiper-flip .swiper-slide-active,
+        .swiper-flip .swiper-slide-active .swiper-slide-active {
+            pointer-events: auto
+        }
+
+        .swiper-flip .swiper-slide-shadow-bottom,
+        .swiper-flip .swiper-slide-shadow-left,
+        .swiper-flip .swiper-slide-shadow-right,
+        .swiper-flip .swiper-slide-shadow-top {
+            z-index: 0;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden
+        }
+
+        .swiper-creative swiper-slide {
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            overflow: hidden;
+            transition-property: transform, opacity, height
+        }
+
+        .swiper-cards {
+            overflow: visible
+        }
+
+        .swiper-cards swiper-slide {
+            transform-origin: center bottom;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            overflow: hidden
+        }
+    </style> -->
+    <title>BoatHead</title>
+
+    <meta name="viewport" content="width=device-width">
+    <meta name="description"
+        content="BoatHead is a Web3 lifestyle app with built in game-fi elements. Complete daily tasks and upgrade your BoatHead NFTs. Monetize your boat lifestyle &amp;amp; build your custom NFT.">
+    <meta name="msapplication-TileColor" content="#9946ff">
+    <meta name="theme-color" content="#9946ff">
+    <meta name="title" content="BoatHead">
+    <meta name="facebook-domain-verification" content="alhutjfku5lm0a174dmnk59qqbkgp6">
+    <meta property="og:title" content="BoatHead">
+    <meta property="og:description"
+        content="BoatHead is a Web3 lifestyle app with built in game-fi elements. Complete daily tasks and upgrade your BoatHead NFTs. Monetize your boat lifestyle &amp;amp; build your custom NFT.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://BoatHead.xyz/images/logo.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+    <meta property="og:url" content="http://BoatHead.xyz/">
+    <meta property="og:site_name" content="BoatHead.xyz">
+    <meta property="twitter:url" content="http://BoatHead.xyz/">
+    <meta property="twitter:title" content="BoatHead">
+    <meta property="twitter:description"
+        content="BoatHead is a Web3 lifestyle app with built in game-fi elements. Complete daily tasks and upgrade your BoatHead NFTs. Monetize your boat lifestyle &amp;amp; build your custom NFT.">
+    <meta property="twitter:image" content="http://BoatHead.xyz/images/logo.png">
+    <link rel="icon" type="image/x-icon" href="http://BoatHead.xyz/favicon.ico">
+    <link rel="stylesheet" href="./BoatHead_files/main.css">
+    <link rel="stylesheet" href="./BoatHead_files/slider.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://BoatHead.xyz/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="http://BoatHead.xyz/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="http://BoatHead.xyz/favicon-16x16.png">
+    <link rel="manifest" href="http://BoatHead.xyz/site.webmanifest">
+    <link rel="mask-icon" href="http://BoatHead.xyz/safari-pinned-tab.svg" color="#9946ff">
+    <script type="text/partytown" src="./BoatHead_files/fbevents.js" data-pterror="TypeError: Failed to fetch
+    at blob:http://BoatHead.xyz/8532364f-a230-49bc-846c-cff673d4c7e7:2:20983
+    at rt (blob:http://BoatHead.xyz/8532364f-a230-49bc-846c-cff673d4c7e7:2:21386)"></script>
+    <script src="./BoatHead_files/twk-main.js" charset="UTF-8" crossorigin="*"></script>
+    <script src="./BoatHead_files/twk-vendor.js" charset="UTF-8" crossorigin="*"></script>
+    <script src="./BoatHead_files/twk-chunk-vendors.js" charset="UTF-8" crossorigin="*"></script>
+    <script src="./BoatHead_files/twk-chunk-common.js" charset="UTF-8" crossorigin="*"></script>
+    <script src="./BoatHead_files/twk-runtime.js" charset="UTF-8" crossorigin="*"></script>
+    <script src="./BoatHead_files/twk-app.js" charset="UTF-8" crossorigin="*"></script>
+    <script async="" src="./BoatHead_files/222e92de60060056b6f87e26c.js"></script>
+    <script async="" src="./BoatHead_files/1go72r30i" crossorigin="*"></script>
+    <script async="" src="./BoatHead_files/js"></script>
+    <script type="text/partytown-x">
+      window.dataLayer = window.dataLayer || [];
+      const gtag = (...args) => dataLayer.push(args);
+      gtag('js', new Date());
+      gtag('config', 'G-46YQY8QDNN');
+    </script>
+    <script type="text/partytown-x">
+      !((f, b, e, v, n, t, s) => {
+        if (f.fbq) return;
+        n = f.fbq = (...args) =>
+          n.callMethod
+            ? n.callMethod.apply(n, args)
+            : n.queue.push(args);
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        'script',
+        'https://connect.facebook.net/en_US/fbevents.js'
+      );
+      fbq('init', '596369695207285');
+      fbq('track', 'PageView');
+    </script>
+    <script type="text/partytown-x">
+      ((h, o, t, j, a, r) => {
+        h.hj = h.hj || (() => (h.hj.q = h.hj.q || []).push(arguments));
+        h._hjSettings = { hjid: 3120283, hjsv: 6 };
+        a = o.getElementsByTagName('head')[0];
+        r = o.createElement('script');
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+
+
+    <!-- CSS Start-->
+    <link rel="stylesheet" href="./BoatHead_files/app.c8a7fdf4.css">
+    <link rel="stylesheet" href="./BoatHead_files/index.1d6ab33b.css">
+    <link rel="stylesheet" href="./BoatHead_files/app.ec6a393f.css">
+    <script type="text/partytown-x" src="./BoatHead_files/hotjar-3120283.js"></script>
+    <script type="text/partytown-x" src="./BoatHead_files/modules.36fe7de285484ee66a3f.js" charset="utf-8"></script>
+    <script charset="utf-8" src="./BoatHead_files/twk-chunk-2c78ba82.js"></script>
+    <script charset="utf-8" src="./BoatHead_files/twk-chunk-696bc286.js"></script>
+    <script charset="utf-8" src="./BoatHead_files/twk-chunk-f1596d96.js"></script>
+    <script charset="utf-8" src="./BoatHead_files/twk-chunk-48f46bef.js"></script>
+    <script charset="utf-8" src="./BoatHead_files/twk-chunk-4fe9d5dd.js"></script>
+    <script charset="utf-8" src="./BoatHead_files/twk-chunk-2d0b9454.js"></script>
+    <script charset="utf-8" src="./BoatHead_files/twk-chunk-f163fcd0.js"></script>
+    <script charset="utf-8" src="./BoatHead_files/twk-chunk-32507910.js"></script>
+    <style type="text/css">
+        #stb9upqc1j9o1684182467656 {
+            outline: none !important;
+            visibility: visible !important;
+            resize: none !important;
+            box-shadow: none !important;
+            overflow: visible !important;
+            background: none !important;
+            opacity: 1 !important;
+            filter: alpha(opacity=100) !important;
+            -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity 1) !important;
+            -mz-opacity: 1 !important;
+            -khtml-opacity: 1 !important;
+            top: auto !important;
+            right: 0px !important;
+            bottom: 0px !important;
+            left: auto !important;
+            position: fixed !important;
+            border: 0 !important;
+            min-height: 0px !important;
+            min-width: 0px !important;
+            max-height: none !important;
+            max-width: none !important;
+            padding: 0px !important;
+            margin: 0px !important;
+            -moz-transition-property: none !important;
+            -webkit-transition-property: none !important;
+            -o-transition-property: none !important;
+            transition-property: none !important;
+            transform: none !important;
+            -webkit-transform: none !important;
+            -ms-transform: none !important;
+            width: auto !important;
+            height: auto !important;
+            display: none !important;
+            z-index: 2000000000 !important;
+            background-color: transparent !important;
+            cursor: none !important;
+            float: none !important;
+            border-radius: unset !important;
+            pointer-events: auto !important;
+            clip: auto !important;
+            color-scheme: light !important;
+        }
+
+        #stb9upqc1j9o1684182467656.widget-hidden {
+            display: none !important;
+        }
+
+        #stb9upqc1j9o1684182467656.widget-visible {
+            display: block !important;
+        }
+
+        @media print {
+            #stb9upqc1j9o1684182467656.widget-visible {
+                display: none !important;
+            }
+        }
+    </style>
+    <script src="./BoatHead_files/emojione.min.js" type="text/javascript" async="" defer=""></script>
+    <script src="./BoatHead_files/emojione.min.js" type="text/javascript" async="" defer=""></script>
+    <style type="text/css">
+        @keyframes tawkMaxOpen {
+            0% {
+                opacity: 0;
+                transform: translate(0, 30px);
+                ;
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(0, 0px);
+            }
+        }
+
+        @-moz-keyframes tawkMaxOpen {
+            0% {
+                opacity: 0;
+                transform: translate(0, 30px);
+                ;
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(0, 0px);
+            }
+        }
+
+        @-webkit-keyframes tawkMaxOpen {
+            0% {
+                opacity: 0;
+                transform: translate(0, 30px);
+                ;
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(0, 0px);
+            }
+        }
+
+        #m507ui9s82b81684182467716.open {
+            animation: tawkMaxOpen .25s ease !important;
+        }
+
+        @keyframes tawkMaxClose {
+            from {
+                opacity: 1;
+                transform: translate(0, 0px);
+                ;
+            }
+
+            to {
+                opacity: 0;
+                transform: translate(0, 30px);
+                ;
+            }
+        }
+
+        @-moz-keyframes tawkMaxClose {
+            from {
+                opacity: 1;
+                transform: translate(0, 0px);
+                ;
+            }
+
+            to {
+                opacity: 0;
+                transform: translate(0, 30px);
+                ;
+            }
+        }
+
+        @-webkit-keyframes tawkMaxClose {
+            from {
+                opacity: 1;
+                transform: translate(0, 0px);
+                ;
+            }
+
+            to {
+                opacity: 0;
+                transform: translate(0, 30px);
+                ;
+            }
+        }
+
+        #m507ui9s82b81684182467716.closed {
+            animation: tawkMaxClose .25s ease !important
+        }
+    </style>
 </head>
 
-<body>
-    <!-- Navigation-->
-    <nav class="navbar navbar-light bg-light static-top">
-        <div class="container">
-            <a class="navbar-brand" href="#!">Boat Head Yatch Club</a>
-            <div class="container"></div>
-            <ul class="list-inline mb-0">
-                <li class="list-inline-item me-4">
-                    <a href="https://twitter.com/boatheadnft"><i class="bi-facebook fs-3"></i></a>
-                </li>
-                <li class="list-inline-item me-4">
-                    <a href="https://twitter.com/boatheadnft"><i class="bi-twitter fs-3"></i></a>
-                </li>
-                <li class="list-inline-item">
-                    <a href="https://twitter.com/boatheadnft"><i class="bi-instagram fs-3"></i></a>
-                </li>
-            </ul>
-            <a class="btn btn-primary" href="#signup">Sign Up</a>
-        </div>
-        </div>
-    </nav>
-    <!-- Masthead-->
-    <header class="masthead">
-        <div class="container position-relative">
-            <div class="row justify-content-center">
+<body data-new-gr-c-s-check-loaded="14.1109.0" data-gr-ext-installed="" data-new-gr-c-s-loaded="14.1109.0">
+    <header class="astro-5QL2MVDM">
+        <div class="wrapper astro-5QL2MVDM">
+            <h1 class="astro-5QL2MVDM"><a href="http://BoatHead.xyz/#" class="astro-5QL2MVDM"><img
+                        src="./assets/logoSample3_Prancheta 1.png" height="75" alt="BoatHead"
+                        style="vertical-align: sub;" class="astro-5QL2MVDM"></a></h1>
+            <style>
+                astro-island,
+                astro-slot {
+                    display: contents
+                }
+            </style>
+            <div class="menu-holder svelte-14tp402"><button aria-label="Open Menu" aria-controls="menu"
+                    class="svelte-14tp402"><img src="./BoatHead_files/menu.svg" alt="Open Menu"
+                        aria-hidden="true"></button>
+                <ul id="menu" class="svelte-14tp402">
+                    <li class="svelte-14tp402"><a href="http://BoatHead.xyz/#tokenomics"
+                            class="svelte-14tp402">Tokenomics</a>
+                    </li>
+                    <li class="svelte-14tp402"><a href="http://BoatHead.xyz/#team" class="svelte-14tp402">Team</a> </li>
+                    <li class="svelte-14tp402"><a href="http://BoatHead.xyz/private-sale" class="svelte-14tp402">Private
+                            sale</a>
+                    </li>
+                    <li class="svelte-14tp402"><a href="http://BoatHead.xyz/app" class="svelte-14tp402">App</a> </li>
+                    <li class="svelte-14tp402"><a href="https://motpovilas.gitbook.io/BoatHead-whitepaper-v1"
+                            target="_blank" rel="noopener" class="svelte-14tp402">Whitepaper</a> </li>
+                </ul>
             </div>
         </div>
     </header>
-    <!-- Intro-->
-    <section class="intro">
-        <div class="mb-4 row">
-            <div class="mb-4 col-lg-7 col-12">
-                <h1 class="d-flex font-italic welcome-title mb-3">Boat Heads!</h1>
-                <p class="common-p mb-0">Join our world of venture and exploration both digitally and outdoors. Level up
-                    your Boat Head NFTs by yachting to different destinations. This increases the value of your NFT and
-                    your adventurous reputation. If you’re unfamiliar with digital yachts, now is the time to find out
-                    what you’ve been missing out on. <br><br> Holder benefits include gathering Digital Burgees from
-                    various yacht clubs, uncovering yacht club secrets and lore, and trading NFTs as part of an
-                    immersive experience. Your digital yacht club membership is your journey that you can share with
-                    other members. Once you’re a member, feel free to engage in interactive events and network with
-                    other Boat Heads. </p>
-            </div>
-            <div class="my-lg-auto col-lg-4 col-12 offset-lg-1">
-                <div class="common-container">
-                    <div class="row">
-                        <div class="pb-2 pr-2 col-6"><img class="img-fluid" src="assets/img/headsfull/Boathead Barn.png"
-                                alt="boathead1" aria-label="boathead1"></div>
-                        <div class="pb-2 pl-2 col-6"><img class="img-fluid" src="assets/img/headsfull/Boathead Ora.png"
-                                alt="boathead2" aria-label="boathead2"></div>
-                    </div>
-                    <div class="row">
-                        <div class="pt-2 pr-2 col-6"><img class="img-fluid" src="assets/img/headsfull/boathead Vice.png"
-                                alt="boathead3" aria-label="boathead3"></div>
-                        <div class="pt-2 pl-2 col-6"><img class="img-fluid"
-                                src="assets/img/headsfull/Boathead Jelly.png" aria-label="boathead4"></div>
-                    </div>
+    <main class="astro-J7PV25F6">
+        <section id="home">
+            <div class="wrapper svelte-euw82y">
+                <div class="column astro-SHWXRD6L">
+                    <h2 class="astro-SHWXRD6L">Float, Boat, Play, <br class="astro-SHWXRD6L">Earn, Enjoy, Repeat!</h2>
+                    <p class="astro-SHWXRD6L">
+                        How Miami Boaters do Web3!
+                        Miami is like an amusement park and Boat Head NFTs is your “Fast Pass”. When you hold a BoatHead
+                        NFT it provides access to experience the Miami yachting scene for yourself. Soon we will release
+                        our MVP BoatHeads App where the boaters will play to win
+                        more tokens and upgrade their BoatHead experience in Miami.
+                    </p>
+                    <p class="buttons astro-SHWXRD6L">
+                        <a href="http://BoatHead.xyz/app" class="button astro-SHWXRD6L">App</a>
+                        <a href="http://BoatHead.xyz/private-sale" class="button astro-SHWXRD6L">Private Sale</a>
+                    </p>
+                    <ul class="social astro-SHWXRD6L">
+                        <li class="astro-SHWXRD6L">
+                            <a href="https://twitter.com/BoatHeadNFT" target="_blank" rel="noopener"
+                                class="astro-SHWXRD6L">
+                                <img src="./BoatHead_files/twitter.svg" width="48" height="48" class="astro-SHWXRD6L">
+                            </a>
+                        </li>
+                        <li class="astro-SHWXRD6L">
+                            <a href="https://discord.gg/8ZEWrB66" target="_blank" rel="noopener" class="astro-SHWXRD6L">
+                                <img src="./BoatHead_files/discord.svg" width="48" height="48" class="astro-SHWXRD6L">
+                            </a>
+                        </li>
+                        <li class="astro-SHWXRD6L">
+                            <a href="https://medium.com/@BoatHead" target="_blank" rel="noopener"
+                                class="astro-SHWXRD6L">
+                                <img src="./BoatHead_files/medium.svg" width="48" height="48"
+                                    class="black astro-SHWXRD6L">
+                            </a>
+                        </li>
+                        <li class="astro-SHWXRD6L">
+                            <a href="https://t.me/BoatHead_Official" target="_blank" rel="noopener"
+                                class="astro-SHWXRD6L">
+                                <img src="./BoatHead_files/telegram.svg" width="48" height="48" class="astro-SHWXRD6L">
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-        </div>
-    </section>
-    <!-- Call to Action-->
-    <section class="call-to-action-small text-white text-center" id="signup">
-        <div class="container position-relative">
-            <div class="row justify-content-center">
-                <div class="col-xl-6">
-                    <h2 class="mb-4">Ready to get started? Sign up now!</h2>
-                    <!-- Signup form-->
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- * * SB Forms Contact Form * *-->
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- This form is pre-integrated with SB Forms.-->
-                    <!-- To make this form functional, sign up at-->
-                    <!-- https://startbootstrap.com/solution/contact-forms-->
-                    <!-- to get an API token!-->
-                    <form class="form-subscribe" id="contactFormFooter" data-sb-form-api-token="API_TOKEN">
-                        <!-- Email address input-->
-                        <div class="row">
-                            <div class="col">
-                                <input class="form-control form-control-lg" id="emailAddressBelow" type="email"
-                                    placeholder="Email Address" data-sb-validations="required,email" />
-                                <div class="invalid-feedback text-white" data-sb-feedback="emailAddressBelow:required">
-                                    Email Address is required.</div>
-                                <div class="invalid-feedback text-white" data-sb-feedback="emailAddressBelow:email">
-                                    Email Address Email is not valid.</div>
-                            </div>
-                            <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="submitButton"
-                                    type="submit">Submit</button></div>
-                        </div>
-                        <!-- Submit success message-->
-                        <!---->
-                        <!-- This is what your users will see when the form-->
-                        <!-- has successfully submitted-->
-                        <div class="d-none" id="submitSuccessMessage">
-                            <div class="text-center mb-3">
-                                <div class="fw-bolder">Form submission successful!</div>
-                                <p>To activate this form, sign up at</p>
-                                <a class="text-white"
-                                    href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                            </div>
-                        </div>
-                        <!-- Submit error message-->
-                        <!---->
-                        <!-- This is what your users will see when there is-->
-                        <!-- an error submitting the form-->
-                        <div class="d-none" id="submitErrorMessage">
-                            <div class="text-center text-danger mb-3">Error sending message!</div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Specs-->
-    <section class="specs">
-        <div class="mb-5 row">
-            <div class="col">
-                <div class="common-container">
-                    <div class="row">
-                        <div class="mb-3 col-lg-7 col-12">
-                            <h2 class="common-title mb-3">THE SPECS</h2>
-                            <p class="common-p">Our dynamic NFTs (dNFTs) are more than just membership tokens. In
-                                addition to each dNFT being a badge of honor as a Boat Head yacht club member, it also
-                                holds value that increases based on your activity. Each dNFT is also encoded with easter
-                                eggs and other fun secrets you’ll unravel over time. <br><br> As a bonus, you can travel
-                                to real-world yacht clubs and level up your NFT. You receive a unique badge for every
-                                location you visit, otherwise known as a digital burgee flag. The value of your Boat
-                                Head dNFT increases for every yacht club you visit. <br><br> The dNFT also functions as
-                                a membership token, and is valued at $1,000 USDC or Ethereum Floor Price. Want to sell
-                                your membership to another Boat Head initiate? That’s also possible and they get the
-                                full rights of the previous holder’s earned rewards and digital yachting membership.</p>
-                        </div>
-                        <div class="my-auto col-lg-4 col-12 offset-lg-1"><img class="img-fluid w-100"
-                                src="assets/img/headsfull/boathead-to-gif.gif" alt="mystery token"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Image Showcases-->
-    <section class="showcase">
-        <div class="container-fluid p-0">
-            <div class="row g-0">
-                <div class="col-lg-6 order-lg-2 text-white showcase-img"
-                    style="background-image: url('assets/img/bg-showcase-1.webp')"></div>
-                <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                    <h2>Problem</h2>
-                    <p class="lead mb-0">Yacht Clubs are too exclusive. They have massive wait lists to join with
-                        expensive annual membership rates. Usually you have to wait for members to die of old age for
-                        the wait lists to cycle through. <br><br> Because they operate at max capacity, they don't scale
-                        very well and as their members age, the activity around the club gradually becomes more and more
-                        stagnant.</p>
-                </div>
-            </div>
-            <div class="row g-0">
-                <div class="col-lg-6 text-white showcase-img"
-                    style="background-image: url('assets/img/bg-showcase-2.jpeg')"></div>
-                <div class="col-lg-6 my-auto showcase-text">
-                    <h2>Solution</h2>
-                    <p class="lead mb-0">Reciprocal membership is the best way for Yacht Clubs to sper on economic
-                        activity between one another <br><br> For first time ever, Yacht Clubs are opening their doors
-                        to an online community of an eccentric group of Boat heads. As the name implies Boat Heads are
-                        people that can't stop thinking and dreaming about boats. And they love to travel to new
-                        destinations and spend their money sampling the local food, cocktails and amenities when
-                        visiting a yacht club.</p>
-                </div>
-            </div>
-            <div class="row g-0">
-                <div class="col-lg-6 order-lg-2 text-white showcase-img"
-                    style="background-image: url('assets/img/bg-showcase-3.webp')"></div>
-                <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-                    <h2>Economics</h2>
-                    <p class="lead mb-0">The Yacht Clubs can expense the BHYC treasury for any expenditures accumulated
-                        by the Boat Heads. <br><br> The BHYC Treasury is amassed by the original Mint of the Boat Head
-                        dNFTs. The Holders pay annual dues, or the dNFT goes back on the open market.<br><br> The BHYC
-                        takes a small percentage on a every transaction involving its dNFTs.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Icons Grid-->
-    <section class="features-icons bg-light text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                        <div class="features-icons-icon d-flex"><i class="bi-window m-auto text-primary"></i></div>
-                        <h3>1 Dynamic NFT Yacht Club Membership</h3>
-                        <p class="lead mb-0">You can travel to different yacht clubs in person and digitally to receive
-                            new dynamic NFTs</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                        <div class="features-icons-icon d-flex"><i class="bi-layers m-auto text-primary"></i></div>
-                        <h3>2 Limited Membership</h3>
-                        <p class="lead mb-0">Only 2,000 people will be allowed to join and utilize holder benefits.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-                        <div class="features-icons-icon d-flex"><i class="bi-terminal m-auto text-primary"></i></div>
-                        <h3>3 Holder Benefits</h3>
-                        <p class="lead mb-0">Full member benefits include a dNFT that accrues in value, an evolving
-                            dNFT, as well as a stake in BHYCs growth.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                        <div class="features-icons-icon d-flex"><i class="bi-window m-auto text-primary"></i></div>
-                        <h3>4 Immersive Experience </h3>
-                        <p class="lead mb-0">Get fully immersed in the digital yacht club world by engaging in the
-                            Interactive Area that boasts a whiteboard and networking arena.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                        <div class="features-icons-icon d-flex"><i class="bi-layers m-auto text-primary"></i></div>
-                        <h3>5 Roadmap Your Journey</h3>
-                        <p class="lead mb-0">Log your journey experience as part of your adventure using a visual
-                            roadmap.</p>
-                    </div>
+                <div class="column image astro-SHWXRD6L">
+                    <picture class="astro-SHWXRD6L">
+                        <source srcset="./BoatHead_files/mosaic.png" media="(max-width: 766px)" class="astro-SHWXRD6L">
+                        <img class="hero-image astro-SHWXRD6L" src="./BoatHead_files/mosaic.png"
+                            alt="A lot of BoatHeads">
+                    </picture>
                 </div>
 
-            </div>
-        </div>
-    </section>
-    <!-- Testimonials-->
-    <section class="testimonials text-center bg-light">
-        <div class="container">
-            <h2 class="mb-5">Who we are...</h2>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                        <img class="img-fluid rounded-circle mb-3" src="assets/img/image4.jpeg" alt="..." />
-                        <h5>Paul Abraham <br> @thenopeking</h5>
-                        <p class="font-weight-light mb-0">"Art is Easy, Conversation is Hard. But together, we can communicate love through Art!"</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                        <img class="img-fluid rounded-circle mb-3" src="assets/img/image2.jpeg" alt="..." />
-                        <h5>Captain J.P.<br> @ahoy.dao</h5>
-                        <p class="font-weight-light mb-0">"Put boats and marine activity on the blockchain."</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                        <img class="img-fluid rounded-circle mb-3" src="assets/img/image3.jpeg" alt="..." />
-                        <h5>Konstantine<br> @cryptobanditclub</h5>
-                        <p class="font-weight-light mb-0">"7+ years in crypto space. I would love share my experience with you."</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="testimonial-item mx-auto mb-5 mb-lg-0">
-                        <img class="img-fluid rounded-circle mb-3" src="assets/img/image1.jpeg" alt="..." />
-                        <h5>Daniel Sanabria<br>@dsanabria.br</h5>
-                        <p class="font-weight-light mb-0">"Senior software engineer, mobile specialist and producer from Brasil"</p>
-                    </div>
+                <div class="svelte-x7uxrd">
+                    <p><span>🏆🥇First Place at <a
+                                href="https://miamibuildathon.notion.site/Miami-Buildathon-Challenges-Bounties-Resources-b5a92197570945edbd284daf67be0b5f"
+                                target="_blank" rel="noreferrer noopener" class="svelte-x7uxrd"><b>Sponsor
+                                    Challenge:</b></a></span>
+                        <a href="https://www.crossmint.com/" target="_blank" rel="noreferrer noopener"
+                            class="svelte-x7uxrd"><img src="./BoatHead_files/crossmint-logo.png" alt="Crossmint"
+                                style="height: 38px;" class="svelte-x7uxrd"></a>
+                        <span>on:</span>
+                        <a href="https://build.miaminftweek.com/" target="_blank" rel="noreferrer noopener"
+                            class="svelte-x7uxrd"><img src="./BoatHead_files/miamiBuildathon_Logo.png"
+                                alt="MiamiNFT Buildathon" style="height: 38px;" class="svelte-x7uxrd"></a>
+                        <span>+</span>
+                        <a href="https://miaminftweek.com/" target="_blank" rel="noreferrer noopener"
+                            class="svelte-x7uxrd"><img src="./BoatHead_files/MiamiNFTWeek-Line-Logo.png"
+                                alt="MiamiNFT Week" style="height: 16px;" class="svelte-x7uxrd"></a>
+                    </p>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Call to Action-->
-    <section class="call-to-action text-white text-center" id="signup">
-        <div class="container position-relative">
-            <div class="row justify-content-center">
-                <div class="col-xl-6">
-                    <h2 class="mb-4">Ready to get started? Sign up now!</h2>
-                    <!-- Signup form-->
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- * * SB Forms Contact Form * *-->
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- This form is pre-integrated with SB Forms.-->
-                    <!-- To make this form functional, sign up at-->
-                    <!-- https://startbootstrap.com/solution/contact-forms-->
-                    <!-- to get an API token!-->
-                    <form class="form-subscribe" id="contactFormFooter" data-sb-form-api-token="3cdd20ac-3527-42ec-ae61-c5542132608d">
-                        <!-- Email address input-->
-                        <div class="row">
-                            <div class="col">
-                                <input class="form-control form-control-lg" id="emailAddressBelow" type="email"
-                                    placeholder="Email Address" data-sb-validations="required,email" />
-                                <div class="invalid-feedback text-white" data-sb-feedback="emailAddressBelow:required">
-                                    Email Address is required.</div>
-                                <div class="invalid-feedback text-white" data-sb-feedback="emailAddressBelow:email">
-                                    Email Address Email is not valid.</div>
+        </section>
+        <section id="boatheads">
+            <div class="wrapper svelte-euw82y">
+                <div class="column astro-E5LPO3VL">
+                    <h2 class="astro-E5LPO3VL"><br>Meet the <span class="clr-p astro-E5LPO3VL">BoatHeads</span></h2>
+                    <p class="astro-E5LPO3VL"><span><br>Accepted on <a
+                                href="https://www.theshrimpsociety.com/insights/built-in-miami-official-announcement"
+                                target="_blank" rel="noreferrer noopener" class="svelte-x7uxrd"><b>The Zero to One
+                                    Startup Sprint</b></a> program of:</span>
+                        <a href="https://www.theshrimpsociety.com/" target="_blank" rel="noreferrer noopener"
+                            class="svelte-x7uxrd"><img src="./BoatHead_files/shrimpsociety.png" alt="Shrimp Society"
+                                style="height: 100px;" class="svelte-x7uxrd"></a>
+                        <a href="https://venturemia.org/" target="_blank" rel="noreferrer noopener"
+                            class="svelte-x7uxrd"><img src="./BoatHead_files/logo-venturemiami.png" alt="Venture Miami"
+                                style="height: 28px;" class="svelte-x7uxrd"></a>
+                        <a href="https://www.argentstrategies.com/" target="_blank" rel="noreferrer noopener"
+                            class="svelte-x7uxrd"><img src="./BoatHead_files/AS-logo.png" alt="Argent Strategies"
+                                style="height: 38px; filter: contrast(0.5);" class="svelte-x7uxrd"></a>
+                    </p>
+                    <p class="astro-E5LPO3VL">
+                        Genesis collection of unique BoatHeads, which enable users to get rewarded
+                        for their boat life.<br class="astro-E5LPO3VL">
+                        10k units will be selled at Genesis flood on XX/XX/2023.
+                    </p>
+                    <div class="component-wrapper">
+                        <div class="slider-outer-shell">
+                            <div class="slider-wrapper" id="slider-wrapper">
+                                <div class="slider" id="slider">
+                                    <div class="slider__item"> <img src="./BoatHead_files/samples/boathead_003.png">
+                                    </div>
+                                    <div class="slider__item"><img src="./BoatHead_files/samples/boathead_009.png">
+                                    </div>
+                                    <div class="slider__item"><img src="./BoatHead_files/samples/boathead_019.png">
+                                    </div>
+                                    <div class="slider__item"><img src="./BoatHead_files/samples/boathead_073.png">
+                                    </div>
+                                    <div class="slider__item"><img src="./BoatHead_files/samples/boathead_090.png">
+                                    </div>
+                                    <div class="slider__item"><img src="./BoatHead_files/samples/boathead_093.png">
+                                    </div>
+                                    <div class="slider__item"><img src="./BoatHead_files/samples/boathead_110.png">
+                                    </div>
+                                    <div class="slider__item"><img src="./BoatHead_files/samples/boathead_221.png">
+                                    </div>
+                                    <div class="slider__item"><img src="./BoatHead_files/samples/boathead_291.png">
+                                    </div>
+                                    <div class="slider__item"><img src="./BoatHead_files/samples/boathead_301.png">
+                                    </div>
+                                    <div class="slider__item"><img src="./BoatHead_files/samples/boathead_416.png">
+                                    </div>
+                                    <div class="slider__item"><img src="./BoatHead_files/samples/boathead_511.png">
+                                    </div>
+                                    <div class="slider__item"><img src="./BoatHead_files/samples/boathead_543.png">
+                                    </div>
+                                    <div class="slider__item"><img src="./BoatHead_files/samples/boathead_613.png">
+                                    </div>
+                                    <div class="slider__item"><img src="./BoatHead_files/samples/boathead_731.png">
+                                    </div>
+                                    <div class="slider__item"><img src="./BoatHead_files/samples/boathead_937.png">
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="submitButton"
-                                    type="submit">Submit</button></div>
+                            <div class="slider__pagination" id="slider-pagination"></div>
+                            <div class="slider__nav-button previous" id="slider-previous"></div>
+                            <div class="slider__nav-button next" id="slider-next"></div>
                         </div>
-                        <!-- Submit success message-->
-                        <!---->
-                        <!-- This is what your users will see when the form-->
-                        <!-- has successfully submitted-->
-                        <div class="d-none" id="submitSuccessMessage">
-                            <div class="text-center mb-3">
-                                <div class="fw-bolder">Form submission successful!</div>
+                    </div>
+                    <script src="./BoatHead_files/slider.js"></script>
+                    <p class="buttons astro-E5LPO3VL">
+                        <a href="https://staging.crossmint.com/collections/demo/drop" class="button astro-E5LPO3VL"
+                            target="_blank" rel="noopener">Buy NFTs</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="about-us">
+            <div class="wrapper svelte-euw82y">
+                <div class="column image astro-GQMBXSAO">
+                    <img src="./assets/img/headsfull/AppSample/marketplacePromo.png"
+                        alt="Marketplace on a mobile device" loading="lazy" class="astro-GQMBXSAO">
+                </div>
+                <div class="column astro-GQMBXSAO">
+                    <h2 class="astro-GQMBXSAO">About <span class="clr-p astro-GQMBXSAO">Us</span></h2>
+                    <p class="astro-GQMBXSAO">
+                        BoatHead is a Web3 app with inbuilt Game-Fi elements rewarding users for
+                        their boat time as well as incentivising them to enjoy experience the Miami yachting lifestyle.
+                    </p>
+
+                    <p class="astro-GQMBXSAO">
+                        BoatHead NFT holders can level up their Boat Head NFTs and also receive Daily Tasks to earn
+                        additional rewards and tokens such
+                        as:
+                    </p>
+                    <ul class="astro-GQMBXSAO">
+                        <li class="astro-GQMBXSAO">Have a 30 min Jetsky session.</li>
+                        <li class="astro-GQMBXSAO">Play a betting Battleship game on the water;</li>
+                        <li class="astro-GQMBXSAO">Have a 4 Hour Boat Party.</li>
+                        <li class="astro-GQMBXSAO">Do check in at sponsored marketplace;.</li>
+                    </ul>
+                    <p class="astro-GQMBXSAO">
+                        Received token rewards can be swapped to stable coin as well as provide I.R.L utility and access
+                        to special events, hard-to-reach places, and discounts on Boating-Related products and services
+                        promo deals from our partners such as gym
+                        memberships, wearables and much more.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="features">
+            <div class="wrapper svelte-euw82y">
+                <div class="column astro-PQ7MMCVT">
+                    <h2 class="astro-PQ7MMCVT">Application</h2>
+                    <p class="astro-PQ7MMCVT">Pre-Beta version will be Live Soon!</p>
+                    <astro-island uid="2bVADJ" component-url="/_astro/AppDetails.6308d341.js" component-export="default"
+                        renderer-url="/_astro/client.c4e17359.js"
+                        props="{&quot;data&quot;:[1,&quot;[[0,{\&quot;title\&quot;:[0,\&quot;&lt;span class=\\\&quot;clr-p\\\&quot;&gt;NFT&lt;/span&gt; marketplace\&quot;],\&quot;paragraph\&quot;:[0,\&quot;Get involved in BoatHead in-app economics by levelling-up, breeding or trading your Sleepies.\&quot;],\&quot;images\&quot;:[1,\&quot;[[0,\\\&quot;/images/app-screens/market.jpg\\\&quot;],[0,\\\&quot;/images/app-screens/sleepie.jpg\\\&quot;]]\&quot;],\&quot;svg\&quot;:[0,\&quot;&lt;svg\\n      xmlns=\\\&quot;http://www.w3.org/2000/svg\\\&quot;\\n      width=\\\&quot;24\\\&quot;\\n      height=\\\&quot;24\\\&quot;\\n      viewBox=\\\&quot;0 0 24 24\\\&quot;\\n      fill=\\\&quot;currentColor\\\&quot;\\n      stroke=\\\&quot;none\\\&quot;\\n      stroke-width=\\\&quot;1\\\&quot;\\n      stroke-linecap=\\\&quot;round\\\&quot;\\n      stroke-linejoin=\\\&quot;round\\\&quot;\\n    &gt;\\n      &lt;g transform=\\\&quot;matrix(0.16 0 0 0.16 12 12)\\\&quot;&gt;\\n        &lt;path\\n          transform=\\\&quot; translate(-64, -64)\\\&quot;\\n          d=\\\&quot;M 64 1.3476562 C 61.7525 1.3476562 59.505 1.9250781 57.5 3.0800781 L 14.5 27.910156 C 10.49 30.230156 8 34.539922 8 39.169922 L 8 88.820312 C 8 93.450312 10.49 97.760078 14.5 100.08008 L 57.5 124.91016 C 59.5 126.07016 61.75 126.65039 64 126.65039 C 66.25 126.65039 68.5 126.07016 70.5 124.91016 L 113.5 100.08008 C 117.51 97.770078 120 93.460078 120 88.830078 L 120 39.169922 C 120 34.539922 117.51 30.230156 113.5 27.910156 L 70.5 3.0800781 C 68.495 1.9250781 66.2475 1.3476562 64 1.3476562 z M 64 7.3417969 C 65.21 7.3417969 66.42 7.6542969 67.5 8.2792969 L 110.5 33.109375 C 112.66 34.359375 114 36.679922 114 39.169922 L 114 88.820312 C 114 91.320312 112.66 93.640625 110.5 94.890625 L 67.5 119.7207 C 65.34 120.9707 62.66 120.9707 60.5 119.7207 L 17.5 94.890625 C 15.34 93.640625 14 91.320078 14 88.830078 L 14 39.169922 C 14 36.679922 15.34 34.349375 17.5 33.109375 L 60.5 8.2792969 C 61.58 7.6542969 62.79 7.3417969 64 7.3417969 z M 64 15.964844 C 63.4825 15.964844 62.965 16.099141 62.5 16.369141 C 61.57 16.909141 61 17.900703 61 18.970703 L 61 109.03906 C 61 110.69906 62.34 112.03906 64 112.03906 C 65.66 112.03906 67 110.69906 67 109.03906 L 67 67 L 79 67 C 80.66 67 82 65.66 82 64 C 82 62.34 80.66 61 79 61 L 67 61 L 67 24.160156 L 92.039062 38.619141 C 92.019063 38.749141 92 38.87 92 39 L 92 89 C 92 90.66 93.34 92 95 92 C 96.66 92 98 90.66 98 89 L 98 42.060547 L 103.5 45.240234 C 104.94 46.070234 106.76961 45.580625 107.59961 44.140625 C 108.42961 42.700625 107.93 40.869062 106.5 40.039062 L 65.5 16.369141 C 65.035 16.099141 64.5175 15.964844 64 15.964844 z M 47 31 C 45.34 31 44 32.34 44 34 L 44 79.730469 L 27.75 42.789062 C 27.18 41.489063 25.780625 40.770547 24.390625 41.060547 C 22.990625 41.360547 22 42.58 22 44 L 22 84 C 22 85.66 23.34 87 25 87 C 26.66 87 28 85.66 28 84 L 28 58.269531 L 44.25 95.210938 C 44.74 96.310937 45.83 97 47 97 C 47.2 97 47.409141 96.979453 47.619141 96.939453 C 49.009141 96.639453 50 95.42 50 94 L 50 34 C 50 32.34 48.66 31 47 31 z\\\&quot;\\n          stroke-linecap=\\\&quot;round\\\&quot;\\n        /&gt;\\n      &lt;/g&gt;\\n    &lt;/svg&gt;\&quot;]}],[0,{\&quot;title\&quot;:[0,\&quot;In-App &lt;span class=\\\&quot;clr-p\\\&quot;&gt;wallet&lt;/span&gt;\&quot;],\&quot;paragraph\&quot;:[0,\&quot;Swap your rewards to BUSD, send and receive $WEZ, $ZZZ.\&quot;],\&quot;images\&quot;:[1,\&quot;[[0,\\\&quot;/images/app-screens/buy-swap-send.jpg\\\&quot;],[0,\\\&quot;/images/app-screens/swap.jpg\\\&quot;]]\&quot;],\&quot;svg\&quot;:[0,\&quot;&lt;svg\\n      xmlns=\\\&quot;http://www.w3.org/2000/svg\\\&quot;\\n      width=\\\&quot;24\\\&quot;\\n      height=\\\&quot;24\\\&quot;\\n      viewBox=\\\&quot;0 0 24 24\\\&quot;\\n      fill=\\\&quot;none\\\&quot;\\n      stroke=\\\&quot;currentColor\\\&quot;\\n      stroke-width=\\\&quot;1\\\&quot;\\n      stroke-linecap=\\\&quot;round\\\&quot;\\n      stroke-linejoin=\\\&quot;round\\\&quot;\\n    &gt;\\n      &lt;path d=\\\&quot;M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4\\\&quot; /&gt;\\n      &lt;path d=\\\&quot;M4 6v12c0 1.1.9 2 2 2h14v-4\\\&quot; /&gt;\\n      &lt;path d=\\\&quot;M18 12a2 2 0 0 0-2 2c0 1.1.9 2 2 2h4v-4h-4z\\\&quot; /&gt;\\n    &lt;/svg&gt;\&quot;]}],[0,{\&quot;title\&quot;:[0,\&quot;Daily &lt;span class=\\\&quot;clr-p\\\&quot;&gt;tasks&lt;/span&gt;\&quot;],\&quot;paragraph\&quot;:[0,\&quot;Complete daily tasks &amp; compete in leaderboards as well as improve a quality of your lifestyle.\&quot;],\&quot;images\&quot;:[1,\&quot;[[0,\\\&quot;/images/app-screens/home.jpg\\\&quot;],[0,\\\&quot;/images/app-screens/ranks.jpg\\\&quot;]]\&quot;],\&quot;svg\&quot;:[0,\&quot;&lt;svg\\n      xmlns=\\\&quot;http://www.w3.org/2000/svg\\\&quot;\\n      width=\\\&quot;24\\\&quot;\\n      height=\\\&quot;24\\\&quot;\\n      viewBox=\\\&quot;0 0 24 24\\\&quot;\\n      fill=\\\&quot;none\\\&quot;\\n      stroke=\\\&quot;currentColor\\\&quot;\\n      stroke-width=\\\&quot;1\\\&quot;\\n      stroke-linecap=\\\&quot;round\\\&quot;\\n      stroke-linejoin=\\\&quot;round\\\&quot;\\n    &gt;\\n      &lt;path d=\\\&quot;M22 11.08V12a10 10 0 1 1-5.93-9.14\\\&quot; /&gt;\\n      &lt;polyline points=\\\&quot;22 4 12 14.01 9 11.01\\\&quot; /&gt;\\n    &lt;/svg&gt;\&quot;]}],[0,{\&quot;title\&quot;:[0,\&quot;&lt;span class=\\\&quot;clr-p\\\&quot;&gt;Health&lt;/span&gt; data tracking\&quot;],\&quot;paragraph\&quot;:[0,\&quot;Track your Health/Fitness activity data as well as receive suggestions on how to build a healthier and more active lifestyle.\&quot;],\&quot;images\&quot;:[1,\&quot;[[0,\\\&quot;/images/app-screens/wallet.jpg\\\&quot;]]\&quot;],\&quot;svg\&quot;:[0,\&quot;&lt;svg\\n      xmlns=\\\&quot;http://www.w3.org/2000/svg\\\&quot;\\n      width=\\\&quot;24\\\&quot;\\n      height=\\\&quot;24\\\&quot;\\n      viewBox=\\\&quot;0 0 24 24\\\&quot;\\n      fill=\\\&quot;none\\\&quot;\\n      stroke=\\\&quot;currentColor\\\&quot;\\n      stroke-width=\\\&quot;1\\\&quot;\\n      stroke-linecap=\\\&quot;round\\\&quot;\\n      stroke-linejoin=\\\&quot;round\\\&quot;\\n    &gt;\\n      &lt;path\\n        d=\\\&quot;M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z\\\&quot;\\n      /&gt;\\n      &lt;path d=\\\&quot;M3.5 12h6l.5-1 2 4.5 2-7 1.5 3.5h5\\\&quot; /&gt;\\n    &lt;/svg&gt;\&quot;]}],[0,{\&quot;title\&quot;:[0,\&quot;B2B2C &amp; &lt;span class=\\\&quot;clr-p\\\&quot;&gt;e-commerce&lt;/span&gt;\&quot;],\&quot;paragraph\&quot;:[0,\&quot;Use your rewards to claim our partner deals such as: diet plans, gym memberships, wearables as well as BoatHead’s own merchandise.\&quot;],\&quot;images\&quot;:[1,\&quot;[[0,\\\&quot;/images/app-screens/b2b2c.jpg\\\&quot;]]\&quot;],\&quot;svg\&quot;:[0,\&quot;&lt;svg\\n      xmlns=\\\&quot;http://www.w3.org/2000/svg\\\&quot;\\n      width=\\\&quot;24\\\&quot;\\n      height=\\\&quot;24\\\&quot;\\n      viewBox=\\\&quot;0 0 24 24\\\&quot;\\n      fill=\\\&quot;none\\\&quot;\\n      stroke=\\\&quot;currentColor\\\&quot;\\n      stroke-width=\\\&quot;1\\\&quot;\\n      stroke-linecap=\\\&quot;round\\\&quot;\\n      stroke-linejoin=\\\&quot;round\\\&quot;\\n    &gt;\\n      &lt;path d=\\\&quot;M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z\\\&quot; /&gt;\\n      &lt;line x1=\\\&quot;3\\\&quot; y1=\\\&quot;6\\\&quot; x2=\\\&quot;21\\\&quot; y2=\\\&quot;6\\\&quot; /&gt;\\n      &lt;path d=\\\&quot;M16 10a4 4 0 0 1-8 0\\\&quot; /&gt;\\n    &lt;/svg&gt;\&quot;]}]]&quot;],&quot;images&quot;:[1,&quot;[[0,\&quot;/images/app-screens/market.jpg\&quot;],[0,\&quot;/images/app-screens/sleepie.jpg\&quot;],[0,\&quot;/images/app-screens/buy-swap-send.jpg\&quot;],[0,\&quot;/images/app-screens/swap.jpg\&quot;],[0,\&quot;/images/app-screens/home.jpg\&quot;],[0,\&quot;/images/app-screens/ranks.jpg\&quot;],[0,\&quot;/images/app-screens/wallet.jpg\&quot;],[0,\&quot;/images/app-screens/b2b2c.jpg\&quot;]]&quot;],&quot;class&quot;:[0,&quot;astro-PQ7MMCVT&quot;]}"
+                        client="visible" opts="{&quot;name&quot;:&quot;AppDetails&quot;,&quot;value&quot;:true}"
+                        await-children="">
+                        <section class="svelte-1xrxa1a">
+                            <div class="features svelte-1xrxa1a">
+                                <h3 class="svelte-1xrxa1a"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none"
+                                        stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                        <g transform="matrix(0.16 0 0 0.16 12 12)">
+                                            <path transform=" translate(-64, -64)"
+                                                d="M 64 1.3476562 C 61.7525 1.3476562 59.505 1.9250781 57.5 3.0800781 L 14.5 27.910156 C 10.49 30.230156 8 34.539922 8 39.169922 L 8 88.820312 C 8 93.450312 10.49 97.760078 14.5 100.08008 L 57.5 124.91016 C 59.5 126.07016 61.75 126.65039 64 126.65039 C 66.25 126.65039 68.5 126.07016 70.5 124.91016 L 113.5 100.08008 C 117.51 97.770078 120 93.460078 120 88.830078 L 120 39.169922 C 120 34.539922 117.51 30.230156 113.5 27.910156 L 70.5 3.0800781 C 68.495 1.9250781 66.2475 1.3476562 64 1.3476562 z M 64 7.3417969 C 65.21 7.3417969 66.42 7.6542969 67.5 8.2792969 L 110.5 33.109375 C 112.66 34.359375 114 36.679922 114 39.169922 L 114 88.820312 C 114 91.320312 112.66 93.640625 110.5 94.890625 L 67.5 119.7207 C 65.34 120.9707 62.66 120.9707 60.5 119.7207 L 17.5 94.890625 C 15.34 93.640625 14 91.320078 14 88.830078 L 14 39.169922 C 14 36.679922 15.34 34.349375 17.5 33.109375 L 60.5 8.2792969 C 61.58 7.6542969 62.79 7.3417969 64 7.3417969 z M 64 15.964844 C 63.4825 15.964844 62.965 16.099141 62.5 16.369141 C 61.57 16.909141 61 17.900703 61 18.970703 L 61 109.03906 C 61 110.69906 62.34 112.03906 64 112.03906 C 65.66 112.03906 67 110.69906 67 109.03906 L 67 67 L 79 67 C 80.66 67 82 65.66 82 64 C 82 62.34 80.66 61 79 61 L 67 61 L 67 24.160156 L 92.039062 38.619141 C 92.019063 38.749141 92 38.87 92 39 L 92 89 C 92 90.66 93.34 92 95 92 C 96.66 92 98 90.66 98 89 L 98 42.060547 L 103.5 45.240234 C 104.94 46.070234 106.76961 45.580625 107.59961 44.140625 C 108.42961 42.700625 107.93 40.869062 106.5 40.039062 L 65.5 16.369141 C 65.035 16.099141 64.5175 15.964844 64 15.964844 z M 47 31 C 45.34 31 44 32.34 44 34 L 44 79.730469 L 27.75 42.789062 C 27.18 41.489063 25.780625 40.770547 24.390625 41.060547 C 22.990625 41.360547 22 42.58 22 44 L 22 84 C 22 85.66 23.34 87 25 87 C 26.66 87 28 85.66 28 84 L 28 58.269531 L 44.25 95.210938 C 44.74 96.310937 45.83 97 47 97 C 47.2 97 47.409141 96.979453 47.619141 96.939453 C 49.009141 96.639453 50 95.42 50 94 L 50 34 C 50 32.34 48.66 31 47 31 z"
+                                                stroke-linecap="round"></path>
+                                        </g>
+                                    </svg> <span class="clr-p">NFT</span> marketplace</h3>
+                                <p>Get involved in BoatHead in-app economics by levelling-up, renting or trading your
+                                    BoatHeads.</p>
+                                <h3 class="svelte-1xrxa1a"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4"></path>
+                                        <path d="M4 6v12c0 1.1.9 2 2 2h14v-4"></path>
+                                        <path d="M18 12a2 2 0 0 0-2 2c0 1.1.9 2 2 2h4v-4h-4z"></path>
+                                    </svg> In-App <span class="clr-p">wallet</span></h3>
+                                <p>Swap your rewards to BHUSD, send and receive $BHT, $BHNFT.</p>
+                                <h3 class="svelte-1xrxa1a"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                    </svg> Daily <span class="clr-p">tasks</span></h3>
+                                <p>Complete daily tasks &amp; compete in leaderboards as well as improve a quality of
+                                    your Miami BoatHead lifestyle.
+                                </p>
+                                <h3 class="svelte-1xrxa1a"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z">
+                                        </path>
+                                        <path d="M3.5 12h6l.5-1 2 4.5 2-7 1.5 3.5h5"></path>
+                                    </svg> <span class="clr-p">Boat</span> data tracking</h3>
+                                <p>Track your Boat activity data as well as receive suggestions on where is the Boat
+                                    Party close, how to
+                                    be a captain and more boat enjoyable active lifestyle.</p>
+                                <h3 class="svelte-1xrxa1a"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                                    </svg> B2B2C &amp; <span class="clr-p">e-commerce</span></h3>
+                                <p>Use your rewards to claim our partner deals such as: boat paties, gym memberships,
+                                    wearables as well as BoatHead’s own merchandise.</p>
+                            </div>
+                            <div class="images svelte-1xrxa1a"><img
+                                    src="./assets/img/headsfull/AppSample/boatheader.png" class="image svelte-1xrxa1a"
+                                    alt="App Feature #0" loading="lazy"><img
+                                    src="./assets/img/headsfull/AppSample/buy-swap-send.png"
+                                    class="image svelte-1xrxa1a" alt="App Feature #1" loading="lazy"><img
+                                    src="./assets/img/headsfull/AppSample/home.png" class="image svelte-1xrxa1a"
+                                    alt="App Feature #2" loading="lazy"><img
+                                    src="./assets/img/headsfull/AppSample/marketplace.png" class="image svelte-1xrxa1a"
+                                    alt="App Feature #3" loading="lazy"><img
+                                    src="./assets/img/headsfull/AppSample/ranking.png" class="image svelte-1xrxa1a"
+                                    alt="App Feature #4" loading="lazy"><img
+                                    src="./assets/img/headsfull/AppSample/swap.png" class="image svelte-1xrxa1a"
+                                    alt="App Feature #5" loading="lazy"><img
+                                    src="./assets/img/headsfull/AppSample/last.png" class="image svelte-1xrxa1a"
+                                    alt="App Feature #6" loading="lazy"><img
+                                    src="./assets/img/headsfull/AppSample/boatheader2.png" class="image svelte-1xrxa1a"
+                                    alt="App Feature #7" loading="lazy"></div>
+                        </section>
+                        <dialog class="svelte-1xrxa1a">
+                            <div class="dialog-image svelte-1xrxa1a"></div>
+                            <div class="controls svelte-1xrxa1a"><button class="button svelte-1xrxa1a">Close
+                                    Dialog</button></div>
+                        </dialog>
+                    </astro-island>
+                </div>
+            </div>
+        </section>
+        <section id="roadmap">
+            <div class="wrapper svelte-euw82y">
+                <div class="column astro-QDES6THF">
+                    <h2 class="astro-QDES6THF">Roadmap</h2>
+                    <div class="road-map svelte-1wjts2u">
+                        <div class="checkpoint svelte-1wjts2u">
+                            <div class="block-start svelte-1wjts2u">
+                                <h3 class="title svelte-1wjts2u">Q1</h3>
+                                <p class="date svelte-1wjts2u">2023 Q1</p>
+                            </div>
+                            <div class="block-end">
+                                <ul class="list svelte-1wjts2u">
+                                    <li>Project start</li>
+                                    <li>Original team formation at NFT Week Miami Buildathon</li>
+                                    <li>Original art concept for BoatHeadNFT </li>
+                                    <li>P.O.C. minting at Devnet on Solana </li>
+                                    <li>Landpage v0.1</li>
+                                    <li>Winning prokect on Crossmint challange</li>
+                                </ul>
                             </div>
                         </div>
-                        <!-- Submit error message-->
-                        <!---->
-                        <!-- This is what your users will see when there is-->
-                        <!-- an error submitting the form-->
-                        <div class="d-none" id="submitErrorMessage">
-                            <div class="text-center text-danger mb-3">Error sending message!</div>
+                        <div class="checkpoint svelte-1wjts2u">
+                            <div class="block-start svelte-1wjts2u">
+                                <h3 class="title svelte-1wjts2u">Q2</h3>
+                                <p class="date svelte-1wjts2u">2023 Q2</p>
+                            </div>
+                            <div class="block-end">
+                                <ul class="list svelte-1wjts2u">
+                                    <li>Accepted into the Shrimp Society Miami-based Accelerator Program.</li>
+                                    <li>Twitter Profile</li>
+                                    <li>Discord</li>
+                                    <li>Rise team formation</li>
+                                    <li>Landpage v1.0</li>
+                                    <li>Tokenomics v0.1</li>
+                                    <li>Concept of the BoatHeadNFT Genesis Flood collection</li>
+                                </ul>
+                            </div>
                         </div>
+                        <div class="checkpoint svelte-1wjts2u">
+                            <div class="block-start svelte-1wjts2u">
+                                <h3 class="title svelte-1wjts2u">Q3</h3>
+                                <p class="date svelte-1wjts2u">2023 Q3</p>
+                            </div>
+                            <div class="block-end">
+                                <ul class="list svelte-1wjts2u">
+                                    <li>Build Summer</li>
+                                    <li>Lightpaper Release</li>
+                                    <li>Whitepaper release</li>
+                                    <li>Partnership building</li>
+                                    <li>Seed and Private Sale start</li>
+                                    <li>NFT mint at Genesis flood collection</li>
+                                    <li>App Pre-Beta release</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="checkpoint svelte-1wjts2u">
+                            <div class="block-start svelte-1wjts2u">
+                                <h3 class="title svelte-1wjts2u">Q4</h3>
+                                <p class="date svelte-1wjts2u">2023 Q4</p>
+                            </div>
+                            <div class="block-end">
+                                <ul class="list svelte-1wjts2u">
+                                    <li>Bug fixing</li>
+                                    <li>IDO start</li>
+                                    <li>B2B2C marketplace release</li>
+                                    <li>App update and Beta release</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="checkpoint svelte-1wjts2u current">
+                            <div class="block-start svelte-1wjts2u">
+                                <h3 class="title svelte-1wjts2u">Q1</h3>
+                                <p class="date svelte-1wjts2u">2024 Q1</p>
+                            </div>
+                            <div class="block-end">
+                                <ul class="list svelte-1wjts2u">
+                                    <li>Grow Provider Network of Miami Businesses. (on-going)</li>
+                                    <li>V1 release</li>
+                                    <li>DEX and CEX listing</li>
+                                    <li>B2B2C marketplace expansion</li>
+                                    <li>Partnerships and collabs</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="tokenomics">
+            <div class="wrapper svelte-euw82y">
+                <div class="column astro-JNONDU3H">
+                    <h2 class="astro-JNONDU3H">Tokenomics v.0.1, <span class="tt-uc clr-p astro-JNONDU3H">$BHNFT
+                            $BHT</span></h2>
+                    <astro-island uid="ZPfiPa" component-url="/_astro/TokenomicsTable.f61807bb.js"
+                        component-export="default" renderer-url="/_astro/client.c4e17359.js"
+                        props="{&quot;class&quot;:[0,&quot;astro-JNONDU3H&quot;]}" client="visible"
+                        opts="{&quot;name&quot;:&quot;TokenomicsTable&quot;,&quot;value&quot;:true}" await-children="">
+                        <table class="svelte-16x72r">
+                            <tbody class="svelte-16x72r">
+                                <tr class="svelte-16x72r">
+                                    <td class="svelte-16x72r"></td>
+                                    <th class="svelte-16x72r">Supply</th>
+                                    <th class="svelte-16x72r">Amount</th>
+                                    <th class="svelte-16x72r">Price, $</th>
+                                    <th class="svelte-16x72r"> Raise, $</th>
+                                    <th class="svelte-16x72r">TGE &amp; Vesting</th>
+                                </tr>
+                                <tr class="svelte-16x72r">
+                                    <th class="svelte-16x72r">$BHNFT</th>
+                                    <td class="svelte-16x72r"></td>
+                                    <td class="svelte-16x72r">10 000</td>
+                                    <td class="svelte-16x72r">55</td>
+                                    <td class="svelte-16x72r">US$ 550 000</td>
+                                    <td class="svelte-16x72r"> Each NFT earn 10k $BHT Seed</td>
+                                </tr>
+                                <tr class="svelte-16x72r">
+                                    <th class="svelte-16x72r">$BHT Seed</th>
+                                    <td class="svelte-16x72r">10.00 %</td>
+                                    <td class="svelte-16x72r">100 000 000</td>
+                                    <td class="svelte-16x72r">0.0055</td>
+                                    <td class="svelte-16x72r"></td>
+                                    <td class="svelte-16x72r">5% at TGE, 6 months cliff &amp; then 18 months linear
+                                        vesting</td>
+                                </tr>
+                                <tr class="svelte-16x72r">
+                                    <th class="svelte-16x72r">$BHT Private Sale</th>
+                                    <td class="svelte-16x72r">10.00 %</td>
+                                    <td class="svelte-16x72r">100 000 000</td>
+                                    <td class="svelte-16x72r">0.0085</td>
+                                    <td class="svelte-16x72r">US$ 850 000</td>
+                                    <td class="svelte-16x72r">15% at TGE, 3 months cliff, then 12 months linear vesting
+                                    </td>
+                                </tr>
+                                <tr class="svelte-16x72r">
+                                    <th class="svelte-16x72r">$BHT Public sale</th>
+                                    <td class="svelte-16x72r">8.00 %</td>
+                                    <td class="svelte-16x72r">80 000 000</td>
+                                    <td class="svelte-16x72r">0.018</td>
+                                    <td class="svelte-16x72r">US$ 1 440 000</td>
+                                    <td class="svelte-16x72r">15% at TGE, then 12 months linear vesting</td>
+                                </tr>
+                                <tr class="svelte-16x72r">
+                                    <th class="svelte-16x72r">$BHT Team</th>
+                                    <td class="svelte-16x72r">14.00 %</td>
+                                    <td class="svelte-16x72r">140 000 000</td>
+                                    <td class="svelte-16x72r"></td>
+                                    <td class="svelte-16x72r"> </td>
+                                    <td class="svelte-16x72r">6 months cliff, then 30 months linear vesting</td>
+                                </tr>
+                                <tr class="svelte-16x72r">
+                                    <th class="svelte-16x72r">$BHT Ecosystem/<wbr>Treasury</th>
+                                    <td class="svelte-16x72r">40.00 %</td>
+                                    <td class="svelte-16x72r">400 000 000</td>
+                                    <td class="svelte-16x72r"></td>
+                                    <td class="svelte-16x72r"> </td>
+                                    <td class="svelte-16x72r">12% at TGE, 9 months cliff, then 39 months linear vesting
+                                    </td>
+                                </tr>
+                                <tr class="svelte-16x72r">
+                                    <th class="svelte-16x72r">$BHT Advisory</th>
+                                    <td class="svelte-16x72r">4.00 %</td>
+                                    <td class="svelte-16x72r">40 000 000</td>
+                                    <td class="svelte-16x72r"></td>
+                                    <td class="svelte-16x72r"> </td>
+                                    <td class="svelte-16x72r">3 months cliff, then 12 months linear vesting</td>
+                                </tr>
+                                <tr class="svelte-16x72r">
+                                    <th class="svelte-16x72r">$BHT Play and Earn</th>
+                                    <td class="svelte-16x72r">14.00 %</td>
+                                    <td class="svelte-16x72r">140 000 000</td>
+                                    <td class="svelte-16x72r"></td>
+                                    <td class="svelte-16x72r"> </td>
+                                    <td class="svelte-16x72r">2% at TGE, then 48 months linear vesting</td>
+                                </tr>
+                                <tr class="svelte-16x72r">
+                                    <th class="svelte-16x72r">Total</th>
+                                    <td class="svelte-16x72r">100.00 %</td>
+                                    <td class="svelte-16x72r">1 000 000 000 $BHT</td>
+                                    <td class="svelte-16x72r"></td>
+                                    <td class="svelte-16x72r">US$ 2 840 000</td>
+                                    <td class="svelte-16x72r"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="svelte-16x72r">FDV: $ 18 000 000; Ecosystem &amp; Treasury Covers:
+                            Liquidity
+                            Pools, Farming Pools, Staking Rewards, Marketing.<br> <a
+                                href="https://bscscan.com/token/0xb59a85103b7a78550420fcab724?a=0x0Efa77c7E2f1FAcC8B6E96Ce765cA171079376c4"
+                                target="_blank" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg"
+                                    width="121.333" height="121.333" viewBox="0 0 121.333 121.333"
+                                    style="width: 32px; height: 32px; margin-top: 1rem">
+                                    <g transform="translate(-219.378 -213.334)">
+                                        <path
+                                            d="M244.6,271.1a5.144,5.144,0,0,1,5.168-5.143l8.568.028a5.151,5.151,0,0,1,5.151,5.151v32.4c.965-.286,2.2-.591,3.559-.911a4.292,4.292,0,0,0,3.309-4.177V258.261a5.152,5.152,0,0,1,5.151-5.152H284.1a5.152,5.152,0,0,1,5.151,5.152v37.3s2.15-.87,4.243-1.754a4.3,4.3,0,0,0,2.625-3.957V245.383a5.151,5.151,0,0,1,5.15-5.151h8.585A5.151,5.151,0,0,1,315,245.383V282c7.443-5.394,14.986-11.882,20.972-19.683a8.646,8.646,0,0,0,1.316-8.072,60.636,60.636,0,1,0-109.855,50.108,7.668,7.668,0,0,0,7.316,3.79c1.624-.143,3.646-.345,6.05-.627a4.29,4.29,0,0,0,3.805-4.258V271.1"
+                                            fill="#12161c"></path>
+                                        <path
+                                            d="M244.417,323.061A60.656,60.656,0,0,0,340.756,274c0-1.4-.065-2.778-.158-4.152-22.163,33.055-63.085,48.508-96.181,53.213"
+                                            fill="#f0b90b"></path>
+                                    </g>
+                                </svg></a></p>
+                    </astro-island>
+                </div>
+            </div>
+        </section>
+        <section id="team">
+            <div class="wrapper svelte-euw82y">
+                <div class="column astro-VGKZTSDU">
+                    <h2 class="astro-VGKZTSDU"><span class="tt-uc clr-p astro-VGKZTSDU">Our</span> Team</h2>
+                    <p class="astro-E5LPO3VL"><iframe width="720" height="420" src="./team.html" title="Our Team"
+                            frameborder="0"></iframe>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="partners">
+            <div class="wrapper svelte-euw82y">
+                <div class="column astro-ROXAUJGO">
+                    <h2 class="astro-ROXAUJGO"><span class="tt-uc clr-p astro-ROXAUJGO">Our</span> Partners</h2>
+                    <div class="logos astro-ROXAUJGO">
+                        <a href="https://dtcgroup.io/" target="_blank" rel="noopener" class="astro-ROXAUJGO">
+                            <img src="./BoatHead_files/dtc-group.png" alt="DTC Group" loading="lazy"
+                                class="astro-ROXAUJGO">
+                        </a>
+                        <a href="https://magiceden.io/" target="_blank" rel="noopener" class="astro-ROXAUJGO">
+                            <img src="./BoatHead_files/magic-eden.png" alt="Magic Eden" loading="lazy"
+                                class="astro-ROXAUJGO">
+                        </a>
+                        <a href="https://www.cls.global/" target="_blank" rel="noopener" class="astro-ROXAUJGO">
+                            <img src="./BoatHead_files/cls.png" alt="CLS" loading="lazy" class="astro-ROXAUJGO">
+                        </a>
+                        <a href="https://pulsetto.tech/" target="_blank" rel="noopener" class="astro-ROXAUJGO">
+                            <img src="./BoatHead_files/pulsetto.png" alt="Pulsetto" loading="lazy"
+                                class="astro-ROXAUJGO">
+                        </a>
+                        <a href="https://ibcgroup.io/" target="_blank" rel="noopener" class="astro-ROXAUJGO">
+                            <img src="./BoatHead_files/ibc.png" alt="IBC Consulting" loading="lazy"
+                                class="astro-ROXAUJGO">
+                        </a>
+                        <a href="https://appidea.io/" target="_blank" rel="noopener" class="astro-ROXAUJGO">
+                            <img src="./BoatHead_files/ibs.png" alt="IBS Development" loading="lazy"
+                                class="astro-ROXAUJGO">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="media">
+            <div class="wrapper svelte-euw82y">
+                <div class="column astro-R5PJNXEH">
+                    <h2 class="astro-R5PJNXEH">Media</h2>
+                    <div class="wrapper astro-R5PJNXEH">
+                        <div class="column astro-R5PJNXEH">
+                            <iframe width="560" height="315" src="./BoatHead_files/re6MhK-yrBk.html"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen="" class="astro-R5PJNXEH"></iframe>
+                        </div>
+                        <div class="column astro-R5PJNXEH">
+                            <iframe width="560" height="315" src="./team.html" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen="" class="astro-R5PJNXEH"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="astro-5JP7RTJD">
+        <div class="wrapper top astro-5JP7RTJD">
+            <div class="column astro-5JP7RTJD">
+                <div class="logo astro-5JP7RTJD">
+                    <a href="http://BoatHead.xyz/#" class="astro-5JP7RTJD">
+                        <img src="./assets/logo.png" alt="BoatHead" loading="lazy" width="250px" class="astro-5JP7RTJD">
+                    </a>
+                </div>
+                <a href="mailto:info@BoatHead.xyz" class="email astro-5JP7RTJD">info@BoatHead.xyz</a>
+                <p class="astro-5JP7RTJD">
+                    <b class="astro-5JP7RTJD">Subscribe</b> and get the <br class="astro-5JP7RTJD">latest updates on our
+                    journey.
+                </p>
+                <astro-island uid="Z11bfQQ" component-url="/_astro/Form.e34b8d6f.js" component-export="default"
+                    renderer-url="/_astro/client.c4e17359.js" props="{&quot;class&quot;:[0,&quot;astro-5JP7RTJD&quot;]}"
+                    client="visible" opts="{&quot;name&quot;:&quot;Form&quot;,&quot;value&quot;:true}"
+                    await-children="">
+                    <form id="subscribe" class="subscribe svelte-bm7d88"
+                        action="http://BoatHead.us13.list-manage.com/subscribe/post-json?u=132b28246cc64f78ef4b16684&amp;id=56ed347f45&amp;c=?"
+                        method="post">
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                                name="b_132b28246cc64f78ef4b16684_56ed347f45" tabindex="-1" class="svelte-bm7d88"></div>
+                        <div class="control email svelte-bm7d88"><input type="email" name="EMAIL"
+                                placeholder="email@example.com" class="svelte-bm7d88" required=""></div>
+                        <div class="control submit svelte-bm7d88"><input type="submit" name="subscribe"
+                                class="svelte-bm7d88" value="Join"></div>
                     </form>
-                </div>
+                    <div class="results"> </div>
+                </astro-island>
+            </div>
+            <div class="column astro-5JP7RTJD">
+                <h3 class="astro-5JP7RTJD">Quick Links</h3>
+                <ul class="menu astro-5JP7RTJD">
+                    <li class="astro-5JP7RTJD"><a href="http://BoatHead.xyz/#team" class="astro-5JP7RTJD">Team</a></li>
+                    <li class="astro-5JP7RTJD"><a href="http://BoatHead.xyz/litepaper"
+                            class="astro-5JP7RTJD">Litepaper</a></li>
+                    <li class="astro-5JP7RTJD"><a href="https://motpovilas.gitbook.io/BoatHead-whitepaper-v1"
+                            class="astro-5JP7RTJD">Whitepaper</a></li>
+                    <li class="astro-5JP7RTJD"><a href="http://BoatHead.xyz/private-sale" class="astro-5JP7RTJD">Private
+                            sale</a>
+                    </li>
+                    <li class="astro-5JP7RTJD"><a href="http://BoatHead.xyz/docs/BoatHead-terms-of-use.pdf"
+                            class="astro-5JP7RTJD">Terms of Use</a></li>
+                </ul>
+                <ul class="social astro-5JP7RTJD">
+                    <li class="astro-5JP7RTJD">
+                        <a href="https://discord.gg/eCXfGTST7W" target="_blank" rel="noopener" class="astro-5JP7RTJD">
+                            <img src="./BoatHead_files/discord.svg" loading="lazy" width="48" height="48"
+                                class="astro-5JP7RTJD">
+                        </a>
+                    </li>
+                    <li class="astro-5JP7RTJD">
+                        <a href="https://twitter.com/BoatHeadOfficial" target="_blank" rel="noopener"
+                            class="astro-5JP7RTJD">
+                            <img src="./BoatHead_files/twitter.svg" loading="lazy" width="48" height="48"
+                                class="astro-5JP7RTJD">
+                        </a>
+                    </li>
+                    <li class="astro-5JP7RTJD">
+                        <a href="http://t.me/BoatHead_Official" target="_blank" rel="noopener" class="astro-5JP7RTJD">
+                            <img src="./BoatHead_files/telegram.svg" loading="lazy" width="48" height="48"
+                                class="astro-5JP7RTJD">
+                        </a>
+                    </li>
+                    <li class="astro-5JP7RTJD">
+                        <a href="https://www.facebook.com/BoatHead.xyz" target="_blank" rel="noopener"
+                            class="astro-5JP7RTJD">
+                            <img src="./BoatHead_files/facebook.svg" loading="lazy" width="48" height="48"
+                                class="astro-5JP7RTJD">
+                        </a>
+                    </li>
+                    <li class="astro-5JP7RTJD">
+                        <a href="https://medium.com/@BoatHead" target="_blank" rel="noopener" class="astro-5JP7RTJD">
+                            <img src="./BoatHead_files/medium.svg" loading="lazy" width="48" height="48"
+                                class="black astro-5JP7RTJD">
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </section>
-    <!-- Footer-->
-    <footer class="footer bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
-                    <ul class="list-inline mb-2">
-                        <li class="list-inline-item"><a href="#!">About</a></li>
-                        <li class="list-inline-item">⋅</li>
-                        <li class="list-inline-item"><a href="#!">Contact</a></li>
-                        <li class="list-inline-item">⋅</li>
-                        <li class="list-inline-item"><a href="#!">Terms of Use</a></li>
-                        <li class="list-inline-item">⋅</li>
-                        <li class="list-inline-item"><a href="#!">Privacy Policy</a></li>
-                    </ul>
-                    <p class="text-muted small mb-4 mb-lg-0">&copy; DS Digital Systems 2023. All Rights Reserved.</p>
-                </div>
-                <div class="col-lg-6 h-100 text-center text-lg-end my-auto">
-                    <ul class="list-inline mb-0">
-                        <li class="list-inline-item me-4">
-                            <a href="https://twitter.com/boatheadnft"><i class="bi-facebook fs-3"></i></a>
-                        </li>
-                        <li class="list-inline-item me-4">
-                            <a href="https://twitter.com/boatheadnft"><i class="bi-twitter fs-3"></i></a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://twitter.com/boatheadnft"><i class="bi-instagram fs-3"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <div class="wrapper bottom astro-5JP7RTJD">
+            <p class="copyright astro-5JP7RTJD">© 2023 <a href="http://BoatHead.xyz/#" class="astro-5JP7RTJD">BoatHead
+                </a> All
+                Right Reserved</p>
+            <a class="button to-top astro-5JP7RTJD" href="http://BoatHead.xyz/#"></a>
         </div>
     </footer>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <!-- * *                               SB Forms JS                               * *-->
-    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-</body>
+
+    <script>
+        let scrollTop = 0;
+        let ticking = false;
+        document.addEventListener('scroll', () => {
+            scrollTop = window.scrollY;
+            if (!ticking) {
+                window.requestAnimationFrame(function () {
+                    if (scrollTop > 0)
+                        document.querySelector('header').classList.add('scrolled');
+                    else document.querySelector('header').classList.remove('scrolled');
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+    </script>
+    <script id="mcjs">!function(c,h,i,m,p){m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/55e981405e057eb0170eb1005/4e7035ae0c6f976f9d8138bca.js");</script>
+
+    <noscript>
+        <img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=596369695207285&ev=PageView&noscript=1">
+    </noscript><iframe id="_hjSafeContext_27612664" title="_hjSafeContext" tabindex="-1" aria-hidden="true"
+        style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"
+        src="./BoatHead_files/saved_resource.html"></iframe>
+    <div id="stb9upqc1j9o1684182467656" class="widget-visible"><iframe src="./BoatHead_files/saved_resource(1).html"
+            frameborder="0" scrolling="no" width="64px" height="60px"
+            style="outline:none !important; visibility:visible !important; resize:none !important; box-shadow:none !important; overflow:visible !important; background:none !important; opacity:1 !important; filter:alpha(opacity=100) !important; -ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity 1) !important; -mz-opacity:1 !important; -khtml-opacity:1 !important; top:auto !important; right:20px !important; bottom:20px !important; left:auto !important; position:fixed !important; border:0 !important; min-height:60px !important; min-width:64px !important; max-height:60px !important; max-width:64px !important; padding:0 !important; margin:0 !important; -moz-transition-property:none !important; -webkit-transition-property:none !important; -o-transition-property:none !important; transition-property:none !important; transform:none !important; -webkit-transform:none !important; -ms-transform:none !important; width:64px !important; height:60px !important; display:block !important; z-index:1000001 !important; background-color:transparent !important; cursor:none !important; float:none !important; border-radius:unset !important; pointer-events:auto !important; clip:auto !important; color-scheme:light !important;"
+            id="jkigk4m1p2kg1684182467686" class="" title="chat widget"></iframe><iframe
+            src="./BoatHead_files/saved_resource(2).html" frameborder="0" scrolling="no" width="350px" height="520px"
+            style="outline:none !important; visibility:visible !important; resize:none !important; box-shadow:none !important; overflow:visible !important; background:none !important; opacity:1 !important; filter:alpha(opacity=100) !important; -ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity 1) !important; -mz-opacity:1 !important; -khtml-opacity:1 !important; top:auto !important; right:10px !important; bottom:90px !important; left:auto !important; position:fixed !important; border:0 !important; min-height:520px !important; min-width:350px !important; max-height:520px !important; max-width:350px !important; padding:0 !important; margin:0 !important; -moz-transition-property:none !important; -webkit-transition-property:none !important; -o-transition-property:none !important; transition-property:none !important; transform:none !important; -webkit-transform:none !important; -ms-transform:none !important; width:350px !important; height:520px !important; display:none !important; z-index:auto !important; background-color:transparent !important; cursor:none !important; float:none !important; border-radius:5px !important; pointer-events:auto !important; clip:auto !important; color-scheme:light !important;"
+            id="m507ui9s82b81684182467716" class="" title="chat widget"></iframe><iframe
+            src="./BoatHead_files/saved_resource(3).html" frameborder="0" scrolling="no" width="360px" height="55px"
+            style="outline:none !important; visibility:visible !important; resize:none !important; box-shadow:none !important; overflow:visible !important; background:none !important; opacity:1 !important; filter:alpha(opacity=100) !important; -ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity 1) !important; -mz-opacity:1 !important; -khtml-opacity:1 !important; top:auto !important; right:20px !important; bottom:100px; left:auto !important; position:fixed !important; border:0 !important; min-height:55px !important; min-width:360px !important; max-height:55px !important; max-width:360px !important; padding:0 !important; margin:0 !important; -moz-transition-property:none !important; -webkit-transition-property:none !important; -o-transition-property:none !important; transition-property:none !important; transform:none !important; -webkit-transform:none !important; -ms-transform:none !important; width:360px !important; height:55px !important; display:none !important; z-index:auto !important; background-color:transparent !important; cursor:none !important; float:none !important; border-radius:unset !important; pointer-events:auto !important; clip:auto !important; color-scheme:light !important;"
+            id="xoq9km5gpqf1684182467708" class="" title="chat widget"></iframe><iframe
+            src="./BoatHead_files/saved_resource(4).html" frameborder="0" scrolling="no" width="124px" height="95px"
+            style="outline:none !important; visibility:visible !important; resize:none !important; box-shadow:none !important; overflow:visible !important; background:none !important; opacity:1 !important; filter:alpha(opacity=100) !important; -ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity 1) !important; -mz-opacity:1 !important; -khtml-opacity:1 !important; top:auto !important; right:0px !important; bottom:30px !important; left:auto !important; position:fixed !important; border:0 !important; min-height:95px !important; min-width:124px !important; max-height:95px !important; max-width:124px !important; padding:0 !important; margin:0px 0 0 0 !important; -moz-transition-property:none !important; -webkit-transition-property:none !important; -o-transition-property:none !important; transition-property:none !important; transform:rotate(0deg) translateZ(0); -webkit-transform:rotate(0deg) translateZ(0); -ms-transform:rotate(0deg) translateZ(0); width:124px !important; height:95px !important; display:none !important; z-index:1000002 !important; background-color:transparent !important; cursor:none !important; float:none !important; border-radius:unset !important; pointer-events:auto !important; clip:auto !important; color-scheme:light !important; -moz-transform:rotate(0deg) translateZ(0); -o-transform:rotate(0deg) translateZ(0); transform-origin:0; -moz-transform-origin:0; -webkit-transform-origin:0; -o-transform-origin:0; -ms-transform-origin:0;"
+            id="ph5b00t2r5ag1684182467729" class="" title="chat widget"></iframe></div>
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open">
+        <style>
+            div.grammarly-desktop-integration {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+                white-space: nowrap;
+                border: 0;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+            div.grammarly-desktop-integration:before {
+                content: attr(data-content);
+            }
+        </style>
+        <div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration"
+            data-content="{&quot;mode&quot;:&quot;limited&quot;,&quot;isActive&quot;:false,&quot;isUserDisabled&quot;:false}">
+        </div>
+    </template></grammarly-desktop-integration>
 
 </html>

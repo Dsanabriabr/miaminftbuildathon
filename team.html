@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./BoatHead_files/index.1d6ab33b.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <title>Our Team</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            touch-action: none;
+        }
+
+        body {
+            overflow: hidden;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-perspective: 1000px;
+            perspective: 1000px;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+        }
+
+        #drag-container,
+        #spin-container {
+            position: relative;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            margin: auto;
+            margin-top: 8px;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-transform: rotateX(-10deg);
+            transform: rotateX(-10deg);
+        }
+
+        #card {
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            margin-inline: auto;
+            border-radius: 20px;
+            -webkit-box-shadow: 0 0 8px #fff;
+            box-shadow: 0 0 8px #fff;
+            -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
+        }
+
+        #img-cover {
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 5px;
+            overflow: hidden;
+            filter: grayscale(1)
+        }
+
+        #ground {
+            width: 900px;
+            height: 900px;
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%) rotateX(90deg);
+            transform: translate(-50%, -50%) rotateX(90deg);
+            background: -webkit-radial-gradient(center center,
+                    farthest-side,
+                    transparent);
+        }
+
+        @-webkit-keyframes spin {
+            from {
+                -webkit-transform: rotateY(0deg);
+                transform: rotateY(0deg);
+            }
+
+            to {
+                -webkit-transform: rotateY(360deg);
+                transform: rotateY(360deg);
+            }
+        }
+
+        @keyframes spin {
+            from {
+                -webkit-transform: rotateY(0deg);
+                transform: rotateY(0deg);
+            }
+
+            to {
+                -webkit-transform: rotateY(360deg);
+                transform: rotateY(360deg);
+            }
+        }
+
+        @-webkit-keyframes spinRevert {
+            from {
+                -webkit-transform: rotateY(360deg);
+                transform: rotateY(360deg);
+            }
+
+            to {
+                -webkit-transform: rotateY(0deg);
+                transform: rotateY(0deg);
+            }
+        }
+
+        @keyframes spinRevert {
+            from {
+                -webkit-transform: rotateY(360deg);
+                transform: rotateY(360deg);
+            }
+
+            to {
+                -webkit-transform: rotateY(0deg);
+                transform: rotateY(0deg);
+            }
+        }
+
+        ul {
+            margin-top: 4px;
+            list-style-type: none;
+        }
+
+        h3 {
+            margin-bottom: 5px
+        }
+
+        p {
+            font-size: 80%;
+        }
+
+        i {
+            font-size: 90%;
+        }
+
+        #img:not(:hover) {
+            filter: grayscale(1)
+        }
+
+        */
+    </style>
+</head>
+
+<body>
+    <div id="drag-container">
+        <div id="spin-container">
+
+            <div id="card" class="card svelte-eue0sf">
+                <div class="image svelte-eue0sf"><img id="img-cover" src="./team/image_JP.jpeg" alt="Captain JP"
+                        loading="lazy" class="svelte-eue0sf"></div>
+                <div class="body svelte-eue0sf">
+                    <div>
+                        <h3 class="svelte-eue0sf">Captain <br>John Paul</h3>
+                        <p>Web3 Master of Business Admin</p>
+                        <p><i>"A proud member of the third generation of boaters"🇺🇸</i></p>
+                    </div>
+                    <ul class="social svelte-eue0sf">
+                        <li><a href="https://www.linkedin.com/in/john-paul-zable-ahoy/" target="_blank"
+                                rel="noreferrer noopener"><img id="img" src="./BoatHead_files/linkedin.svg" width="32"
+                                    alt="LinkedIn" loading="lazy"></a></li>
+                        <li><a href="https://instagram.com/ahoy.dao" target="_blank"
+                                rel="noreferrer noopener"><img id="img" src="./BoatHead_files/instagram.png" width="32"
+                                    alt="LinkedIn" loading="lazy"></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="card" class="card svelte-eue0sf">
+                <div class="image svelte-eue0sf"><img id="img-cover" src="./team/image_NK.png" alt="Paul TheNopeKing"
+                        loading="lazy" class="svelte-eue0sf"></div>
+                <div class="body svelte-eue0sf">
+                    <div>
+                        <h3 class="svelte-eue0sf">Paul <br>TheNopeKing</h3>
+                        <p>Creative Director, Web 3 Designer</p>
+                        <p><i>"Together we can communicate love through Art"🇺🇸</i></p>
+                    </div>
+                    <ul class="social svelte-eue0sf">
+                        <li><a href="https://www.instagram.com/thenopeking/" target="_blank"
+                                rel="noreferrer noopener"><img id="img" src="./BoatHead_files/instagram.png" width="32"
+                                    alt="LinkedIn" loading="lazy"></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="card" class="card svelte-eue0sf">
+                <div class="image svelte-eue0sf"><img id="img-cover" src="./team/image_DS.png" alt="Daniel Sanabria"
+                        loading="lazy" class="svelte-eue0sf"></div>
+                <div class="body svelte-eue0sf">
+                    <div>
+                        <h3 class="svelte-eue0sf">Daniel <br>Sanabria</h3>
+                        <p>Senior Software Engineer</p>
+                        <p><i>"The well-being of humans and Pachamama are my tech goal!"🇧🇷🇧🇴</i></p>
+                    </div>
+                    <ul class="social svelte-eue0sf">
+                        <li><a href="https://www.linkedin.com/in/dsanabriabr/" target="_blank"
+                                rel="noreferrer noopener"><img id="img" src="./BoatHead_files/linkedin.svg" width="32"
+                                    alt="LinkedIn" loading="lazy"></a></li>
+                        <li><a href="https://instagram.com/dsanabria.br" target="_blank" rel="noreferrer noopener"><img
+                                    id="img" src="./BoatHead_files/instagram.png" width="32" alt="LinkedIn"
+                                    loading="lazy"></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="card" class="card svelte-eue0sf">
+                <div class="image svelte-eue0sf"><img id="img-cover" src="./team/image_K.png" alt="Konstantin Nelson"
+                        loading="lazy" class="svelte-eue0sf"></div>
+                <div class="body svelte-eue0sf">
+                    <div>
+                        <h3 class="svelte-eue0sf">Konstantin <br>Nelson</h3>
+                        <p>Entrepreneur, Crypto Investor</p>
+                        <p><i>"I would love share my web3 experience"🇺🇸🇷🇺</i></p>
+                    </div>
+                    <ul class="social svelte-eue0sf">
+                        <li><a href="https://instagram.com/cryptobanditclub" target="_blank"
+                                rel="noreferrer noopener"><img id="img" src="./BoatHead_files/instagram.png" width="32"
+                                    alt="LinkedIn" loading="lazy"></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="card" class="card svelte-eue0sf">
+                <div class="image svelte-eue0sf"><img id="img-cover" src="./team/image_PM.jpeg" alt="Paul Carpenter"
+                        loading="lazy" class="svelte-eue0sf"></div>
+                <div class="body svelte-eue0sf">
+                    <div>
+                        <h3 class="svelte-eue0sf">Paul <br>Carpenter</h3>
+                        <p>Magician, The Mental Dynamo</p>
+                        <p><i>"I think you're Mentally Hip!"🇺🇸</i></p>
+                    </div>
+                    <ul class="social svelte-eue0sf">
+                        <li><a href="https://www.linkedin.com/in/mentallyhyp/" target="_blank"
+                                rel="noreferrer noopener"><img id="img" src="./BoatHead_files/linkedin.svg" width="32"
+                                    alt="LinkedIn" loading="lazy"></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="card" class="card svelte-eue0sf">
+                <div class="image svelte-eue0sf"><img id="img-cover" src="./team/image_RM.png" alt="Romi Myers"
+                        loading="lazy" class="svelte-eue0sf"></div>
+                <div class="body svelte-eue0sf">
+                    <div>
+                        <h3 class="svelte-eue0sf">Romi <br>Myers</h3>
+                        <p>A.R. + NFT Artist, Team Manager</p>
+                        <p><i>From 🇯🇵🇮🇹🇧🇷🇺🇸 mundo_da_romi</i></p>
+                    </div>
+                    <ul class="social svelte-eue0sf">
+                        <li><a href="https://www.linkedin.com/in/mundodaromi/" target="_blank"
+                                rel="noreferrer noopener"><img id="img" src="./BoatHead_files/linkedin.svg" width="32"
+                                    alt="LinkedIn" loading="lazy"></a></li>
+                        <li><a href="https://www.instagram.com/mundodaromi/" target="_blank"
+                                rel="noreferrer noopener"><img id="img" src="./BoatHead_files/instagram.png" width="32"
+                                    alt="LinkedIn" loading="lazy"></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div id="ground"></div>
+    </div>
+
+    <script>
+
+        var radius = 296; // how big of the radius
+        var autoRotate = true; // auto rotate or not
+        var rotateSpeed = -120; // unit: seconds/360 degrees
+        var imgWidth = 128; // width of images (unit: px)
+        var imgHeight = 224; // height of images (unit: px)
+
+        // ===================== start =======================
+        setTimeout(init, 100);
+
+        var odrag = document.getElementById("drag-container");
+        var ospin = document.getElementById("spin-container");
+        var aCard = ospin.getElementsByClassName("card svelte-eue0sf");
+        var aEle = [...aCard]; // combine arrays
+
+        // Size of images
+        ospin.style.width = imgWidth + "px";
+        ospin.style.height = imgHeight + "px";
+
+        // Size of ground - depend on radius
+        var ground = document.getElementById("ground");
+        ground.style.width = radius * 3 + "px";
+        ground.style.height = radius * 3 + "px";
+
+        function init(delayTime) {
+            for (var i = 0; i < aEle.length; i++) {
+                aEle[i].style.transform =
+                    "rotateY(" +
+                    i * (360 / aEle.length) +
+                    "deg) translateZ(" +
+                    radius +
+                    "px)";
+                aEle[i].style.transition = "transform 1s";
+                aEle[i].style.transitionDelay =
+                    delayTime || (aEle.length - i) / 4 + "s";
+            }
+        }
+
+        function applyTranform(obj) {
+            // Constrain the angle of camera (between 0 and 180)
+            if (tY > 180) tY = 180;
+            if (tY < 0) tY = 0;
+
+            // Apply the angle
+            obj.style.transform = "rotateX(" + -tY + "deg) rotateY(" + tX + "deg)";
+        }
+
+        function playSpin(yes) {
+            ospin.style.animationPlayState = yes ? "running" : "paused";
+        }
+
+        var sX,
+            sY,
+            nX,
+            nY,
+            desX = 0,
+            desY = 0,
+            tX = 0,
+            tY = 10;
+
+        // auto spin
+        if (autoRotate) {
+            var animationName = rotateSpeed > 0 ? "spin" : "spinRevert";
+            ospin.style.animation = `${animationName} ${Math.abs(
+                rotateSpeed
+            )}s infinite linear`;
+        }
+
+        // setup events
+        document.onpointerdown = function (e) {
+            clearInterval(odrag.timer);
+            e = e || window.event;
+            var sX = e.clientX,
+                sY = e.clientY;
+
+            this.onpointermove = function (e) {
+                e = e || window.event;
+                var nX = e.clientX,
+                    nY = e.clientY;
+                desX = nX - sX;
+                desY = nY - sY;
+                tX += desX * 0.1;
+                tY += desY * 0.1;
+                applyTranform(odrag);
+                sX = nX;
+                sY = nY;
+            };
+
+            this.onpointerup = function (e) {
+                odrag.timer = setInterval(function () {
+                    desX *= 0.95;
+                    desY *= 0.95;
+                    tX += desX * 0.1;
+                    tY += desY * 0.1;
+                    applyTranform(odrag);
+                    playSpin(false);
+                    if (Math.abs(desX) < 0.5 && Math.abs(desY) < 0.5) {
+                        clearInterval(odrag.timer);
+                        playSpin(true);
+                    }
+                }, 17);
+                this.onpointermove = this.onpointerup = null;
+            };
+
+            return false;
+        };
+
+        document.onmousewheel = function (e) {
+            e = e || window.event;
+            var d = e.wheelDelta / 20 || -e.detail;
+            radius += d;
+            init(1);
+        };
+    </script>
+</body>
+
+</html>

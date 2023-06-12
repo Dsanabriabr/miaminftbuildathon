@@ -1,0 +1,155 @@
+// Variables
+$animation-speed: 0.5s;
+$component-width: 100%;
+$component-gutter: 10px;
+$slider-nav-dim: 60px;
+$slider-item-padding: 0px;
+$slider-item-spacing: 10px; // A number that can stay whole when divided by 2
+
+// Breakpoints
+$bps: (
+    xxsmall: 320px,
+    xsmall: 480px,
+    small: 600px,
+    medium: 760px,
+    large: 900px
+);
+
+// Functions
+@function calculateItemWidth($itemAmount) {
+    $itemWidthPercentage: 100 / $itemAmount * 1%;
+    @return calc(
+        #{$itemWidthPercentage} - #{$slider-item-spacing} - #{$slider-item-padding *
+            2} + #{$slider-item-spacing}/#{$itemAmount}
+    );
+    // @return calc(#{$itemWidthPercentage} - #{$slider-item-spacing} - 0px + #{$slider-item-spacing}/#{$itemAmount});
+}
+
+// Mixins
+@mixin item-width($itemsPerSlide) {
+    box-sizing: border-box;
+    max-width: calculateItemWidth($itemsPerSlide);
+    min-width: calculateItemWidth($itemsPerSlide);
+}
+
+.component-wrapper {
+    margin: 0 auto;
+    max-width: calc(100% - #{$component-gutter}* 2);
+    margin: 0 $component-gutter;
+    text-align: center;
+    width: $component-width;
+}
+
+// Responsive slider
+.slider-outer-shell {
+    position: relative;
+    width: 100%;
+}
+
+.slider-wrapper {
+    overflow: hidden;
+    margin: 0 $slider-nav-dim;
+    position: relative;
+    width: calc(100% - #{$slider-nav-dim * 2});
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    transition: transform $animation-speed;
+    width: 100%;
+
+    .show-slider-navigation & {
+        justify-content: flex-start;
+    }
+}
+
+.slider__item {
+    @include item-width(1);
+    background-color: #ffff;
+    color: #fff;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    margin-left: $slider-item-spacing/2;
+    margin-right: $slider-item-spacing/2;
+    outline: none;
+    padding: 10px;
+    position: relative;
+    user-select: none;
+    
+
+    &:first-child {
+        margin-left: 0;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @media only screen and (min-width: map-get($bps, xsmall)) {
+        @include item-width(2);
+    }
+
+    @media only screen and (min-width: map-get($bps, small)) {
+        @include item-width(3);
+    }
+
+    @media only screen and (min-width: map-get($bps, medium)) {
+        @include item-width(4);
+    }
+
+    @media only screen and (min-width: map-get($bps, large)) {
+        @include item-width(5);
+    }
+}
+
+.slider__nav-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: $slider-nav-dim;
+
+    svg {
+        width: 100%;
+
+        > * {
+            fill: #1dcaff;
+        }
+    }
+
+    &.previous {
+        left: 0;
+        justify-content: flex-start;
+    }
+
+    &.next {
+        right: 0;
+        justify-content: flex-end;
+    }
+}
+
+.slider__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    // padding: 10px 0;
+    width: 100%;
+}
+
+.slider__pagination-item {
+    background-color: #1dcaff;
+    border-radius: 50%;
+    display: block;
+    height: 10px;
+    margin: 0 8px;
+    width: 10px;
+}
