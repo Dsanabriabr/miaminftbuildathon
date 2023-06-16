@@ -268,8 +268,16 @@
                 }
             </style>
             <div class="menu-holder svelte-14tp402"><button aria-label="Open Menu" aria-controls="menu"
-                    class="svelte-14tp402"><img src="./BoatHead_files/menu.svg" alt="Open Menu" height="32px"
-                        aria-hidden="true"></button>
+                    class="button-two" aria-expanded="false">
+                    <svg stroke="var(--button-color)" class="hamburger" viewBox="0 0 100 100" width="44">
+                        <line class="line top" x1="90" x2="10" y1="40" y2="40" stroke-width="10" stroke-linecap="round"
+                            stroke-dasharray="80" stroke-dashoffset="0">
+                        </line>
+                        <line class="line bottom" x1="10" x2="90" y1="60" y2="60" stroke-width="10"
+                            stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0">
+                        </line>
+                    </svg>
+                </button>
                 <ul id="menu" class="svelte-14tp402">
                     <li class="svelte-14tp402"><a href="#team" class="svelte-14tp402">Team</a> </li>
                     <li class="svelte-14tp402"><a href="#roadmap" class="svelte-14tp402">Roadmap</a>
@@ -281,6 +289,23 @@
                 </ul>
             </div>
         </div>
+        <script>
+            const buttons = document.querySelectorAll("button");
+
+            buttons.forEach((button) => {
+                button.addEventListener("click", () => {
+                    const currentState = button.getAttribute("data-state");
+
+                    if (!currentState || currentState === "closed") {
+                        button.setAttribute("data-state", "opened");
+                        button.setAttribute("aria-expanded", "true");
+                    } else {
+                        button.setAttribute("data-state", "closed");
+                        button.setAttribute("aria-expanded", "false");
+                    }
+                });
+            });
+        </script>
     </header>
     <main class="astro-J7PV25F6">
         <section id="home">
@@ -373,34 +398,47 @@
                                     <div class="slider__item"><img id="myImg" alt="BoatHead#009"
                                             src="./BoatHead_files/samples/boathead_009.png">
                                     </div>
-                                    <div class="slider__item"><img id="myImg" alt="BoatHead#019" src="./BoatHead_files/samples/boathead_019.png">
+                                    <div class="slider__item"><img id="myImg" alt="BoatHead#019"
+                                            src="./BoatHead_files/samples/boathead_019.png">
                                     </div>
-                                    <div class="slider__item"><img id="myImg" alt="BoatHead#073" src="./BoatHead_files/samples/boathead_073.png">
+                                    <div class="slider__item"><img id="myImg" alt="BoatHead#073"
+                                            src="./BoatHead_files/samples/boathead_073.png">
                                     </div>
-                                    <div class="slider__item"><img id="myImg" alt="BoatHead#090" src="./BoatHead_files/samples/boathead_090.png">
+                                    <div class="slider__item"><img id="myImg" alt="BoatHead#090"
+                                            src="./BoatHead_files/samples/boathead_090.png">
                                     </div>
-                                    <div class="slider__item"><img id="myImg" alt="BoatHead#093" src="./BoatHead_files/samples/boathead_093.png">
+                                    <div class="slider__item"><img id="myImg" alt="BoatHead#093"
+                                            src="./BoatHead_files/samples/boathead_093.png">
                                     </div>
-                                    <div class="slider__item"><img id="myImg" alt="BoatHead#110" src="./BoatHead_files/samples/boathead_110.png">
+                                    <div class="slider__item"><img id="myImg" alt="BoatHead#110"
+                                            src="./BoatHead_files/samples/boathead_110.png">
                                     </div>
-                                    <div class="slider__item"><img src="./BoatHead_files/samples/boathead_221.png">
+                                    <div class="slider__item"><img id="myImg" alt="BoatHead#221"
+                                            src="./BoatHead_files/samples/boathead_221.png">
                                     </div>
-                                    <div class="slider__item"><img id="myImg" alt="BoatHead#291" src="./BoatHead_files/samples/boathead_291.png">
+                                    <div class="slider__item"><img id="myImg" alt="BoatHead#291"
+                                            src="./BoatHead_files/samples/boathead_291.png">
                                     </div>
-                                    <div class="slider__item"><img id="myImg" alt="BoatHead#301" src="./BoatHead_files/samples/boathead_301.png">
+                                    <div class="slider__item"><img id="myImg" alt="BoatHead#301"
+                                            src="./BoatHead_files/samples/boathead_301.png">
                                     </div>
-                                    <div class="slider__item"><img src="./BoatHead_files/samples/boathead_416.png">
+                                    <div class="slider__item"><img id="myImg" alt="BoatHead#416"
+                                            src="./BoatHead_files/samples/boathead_416.png">
                                     </div>
-                                    <div class="slider__item"><img id="myImg" alt="BoatHead#511" src="./BoatHead_files/samples/boathead_511.png">
+                                    <div class="slider__item"><img id="myImg" alt="BoatHead#511"
+                                            src="./BoatHead_files/samples/boathead_511.png">
                                     </div>
-                                    <div class="slider__item"><img id="myImg" alt="BoatHead#543" src="./BoatHead_files/samples/boathead_543.png">
+                                    <div class="slider__item"><img id="myImg" alt="BoatHead#543"
+                                            src="./BoatHead_files/samples/boathead_543.png">
                                     </div>
-                                    <div class="slider__item"><img id="myImg" alt="BoatHead#613" src="./BoatHead_files/samples/boathead_613.png">
+                                    <div class="slider__item"><img id="myImg" alt="BoatHead#613"
+                                            src="./BoatHead_files/samples/boathead_613.png">
                                     </div>
                                     <div class="slider__item"><img id="myImg" alt="BoatHead#731"
                                             src="./BoatHead_files/samples/boathead_731.png">
                                     </div>
-                                    <div class="slider__item"><img id="myImg" alt="BoatHead#937" src="./BoatHead_files/samples/boathead_937.png">
+                                    <div class="slider__item"><img id="myImg" alt="BoatHead#937"
+                                            src="./BoatHead_files/samples/boathead_937.png">
                                     </div>
                                 </div>
                             </div>
