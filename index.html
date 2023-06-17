@@ -291,15 +291,18 @@
         </div>
         <script>
             const buttons = document.querySelectorAll("button");
-
+    
             buttons.forEach((button) => {
                 button.addEventListener("click", () => {
                     const currentState = button.getAttribute("data-state");
+                    const menu = document.getElementById("menu");
 
                     if (!currentState || currentState === "closed") {
+                        menu.setAttribute("class", "open svelte-14tp402");
                         button.setAttribute("data-state", "opened");
                         button.setAttribute("aria-expanded", "true");
                     } else {
+                        menu.setAttribute("class", "svelte-14tp402");
                         button.setAttribute("data-state", "closed");
                         button.setAttribute("aria-expanded", "false");
                     }

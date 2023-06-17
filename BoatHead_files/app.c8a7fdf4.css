@@ -42,7 +42,8 @@ a.svelte-14tp402.svelte-14tp402:hover {
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 0 10px #0000001a;
-        font-size: 1.5em
+        font-size: 1.5em;
+        transition: opacity 1.8s
     }
 
     ul.open.svelte-14tp402 li.svelte-14tp402 {
