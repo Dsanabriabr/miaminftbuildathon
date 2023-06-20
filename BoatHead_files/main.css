@@ -2,6 +2,7 @@
   font-family: 'Lorin';
   src: url(/fonts/Lorin-Regular.ttf);
 }
+
 @font-face {
   font-family: 'Brandon Grotesque';
   src: url(/fonts/Brandon-Grotesque-Light.otf);
@@ -26,9 +27,11 @@
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--clr-primary);
 }
+
 ::-webkit-scrollbar-track {
   background: #f4f4f4;
 }
@@ -36,39 +39,47 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
+
 html, body {
   margin: 0;
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
 }
+
 body {
   font-family: 'Lorin', sans-serif;
   font-size: var(--fs-md);
   color: var(--clr-body);
   line-height: 1.2;
 }
+
 img {
   max-width: 100%;
 }
+
 h2 {
   font-weight: 700;
   font-size: var(--fs-lg);
   color: var(--clr-head);
 }
+
 a {
   color: var(--clr-tertiary);
 }
+
 a:hover {
   color: var(--clr-primary);
 }
+
 header .wrapper,
 footer .wrapper,
-section > .wrapper {
+section>.wrapper {
   width: 1170px;
   max-width: 100%;
   padding-inline: var(--fs-md);
   margin-inline: auto;
 }
+
 header .wrapper {
   display: flex;
   flex-direction: row;
@@ -76,6 +87,7 @@ header .wrapper {
   align-items: center;
   margin-inline: auto;
 }
+
 @media screen and (min-width: 767px) {
   .wrapper {
     display: flex;
@@ -83,10 +95,27 @@ header .wrapper {
     justify-content: space-between;
     align-items: center;
   }
+
+  .column:where(.astro-SHWXRD6L).image picture:where(.astro-SHWXRD6L) {
+    margin-top: 8%;
+  }
 }
+
+@media screen and (max-height: 640px) {
+  div .column:where(.astro-SHWXRD6L) {
+    padding-top: 8%;
+  }
+
+  div .column:where(.astro-E5LPO3VL) {
+    padding-top: 8%;
+  }
+}
+
 .column {
-  flex: 1;;
+  flex: 1;
+  ;
 }
+
 .social {
   list-style: none;
   display: flex;
@@ -94,22 +123,28 @@ header .wrapper {
   margin-inline: 0;
   padding-inline: 0;
 }
+
 .social a:not(:hover) img {
   filter: grayscale();
 }
+
 /* utility */
 .fs-s {
   font-size: .5em;
 }
+
 .tt-uc {
   text-transform: uppercase;
 }
+
 .clr-n {
   color: var(--clr-body);
 }
+
 .clr-p {
   color: var(--clr-primary);
 }
+
 .button {
   background: linear-gradient(21deg, var(--clr-primary), var(--clr-secondary));
   display: inline-block;
@@ -120,6 +155,7 @@ header .wrapper {
   transform: scale(1);
   transition: .2s;
 }
+
 .button:hover {
   transform: scale(1.05);
   color: #fff;
@@ -127,17 +163,26 @@ header .wrapper {
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 120px; /* Location of the box */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 120px;
+  /* Location of the box */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
 }
 
 /* Modal Content (image) */
@@ -161,7 +206,7 @@ header .wrapper {
 }
 
 /* Add Animation */
-.modal-content, #caption {  
+.modal-content, #caption {
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
@@ -169,13 +214,23 @@ header .wrapper {
 }
 
 @-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)} 
-  to {-webkit-transform:scale(1)}
+  from {
+    -webkit-transform: scale(0)
+  }
+
+  to {
+    -webkit-transform: scale(1)
+  }
 }
 
 @keyframes zoom {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
 }
 
 /* The Close Button */
@@ -196,7 +251,7 @@ header .wrapper {
 }
 
 /* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 700px) {
   .modal-content {
     width: 100%;
   }
@@ -210,7 +265,7 @@ button {
 /* button two */
 
 @media screen and (min-width: 900px) {
-  .button-two{
+  .button-two {
     display: none;
   }
 }
@@ -226,9 +281,11 @@ button {
 .button-two[data-state="opened"] :is(.top, .bottom) {
   animation: to-close-icon 1s forwards;
 }
+
 .button-two .hamburger {
   transition: rotate 800ms 100ms;
 }
+
 .button-two[data-state="opened"] .hamburger {
   rotate: 1turn;
 }
@@ -237,6 +294,7 @@ button {
   --rotation: -45deg;
   transform-origin: 65px 45px;
 }
+
 .button-two .line.bottom {
   --rotation: 45deg;
   transform-origin: 60px 55px;
@@ -246,30 +304,37 @@ button {
   0% {
     stroke-dashoffset: 0;
   }
+
   40% {
     stroke-dashoffset: 79.9;
   }
+
   60% {
     stroke-dashoffset: 79.9;
     rotate: calc(var(--rotation));
   }
+
   100% {
     stroke-dashoffset: 0;
     rotate: var(--rotation);
   }
 }
+
 @keyframes to-open-icon {
   0% {
     stroke-dashoffset: 0;
     rotate: var(--rotation);
   }
+
   40% {
     stroke-dashoffset: 79.9;
     rotate: var(--rotation);
   }
+
   60% {
     stroke-dashoffset: 79.9;
   }
+
   100% {
     stroke-dashoffset: 0;
   }

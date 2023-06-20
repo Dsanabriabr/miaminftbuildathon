@@ -26,6 +26,10 @@ img.svelte-x7uxrd, svg.svelte-x7uxrd {
         width: 100%;
         text-align: center
     }
+
+    picture.astro-SHWXRD6L {
+        margin-top: 0%;
+    }
 }
 
 p:where(.astro-SHWXRD6L):not(.buttons) {
@@ -38,6 +42,7 @@ p:where(.astro-SHWXRD6L):not(.buttons) {
 }
 
 .column:where(.astro-SHWXRD6L).image picture:where(.astro-SHWXRD6L) {
+    margin-top: 8%;
     display: flex;
     place-content: center;
     place-items: center
