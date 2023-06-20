@@ -95,10 +95,6 @@ header .wrapper {
     justify-content: space-between;
     align-items: center;
   }
-
-  .column:where(.astro-SHWXRD6L).image picture:where(.astro-SHWXRD6L) {
-    margin-top: 8%;
-  }
 }
 
 @media screen and (max-height: 640px) {
@@ -189,7 +185,6 @@ header .wrapper {
 .modal-content {
   margin: auto;
   display: block;
-  width: 80%;
   max-width: 700px;
 }
 
