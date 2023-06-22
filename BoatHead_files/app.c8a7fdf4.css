@@ -252,7 +252,6 @@ input.svelte-bm7d88.svelte-bm7d88 {
 }
 
 footer:where(.astro-5JP7RTJD) {
-    background-image: url(/images/backgrounds/bg-footer.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain

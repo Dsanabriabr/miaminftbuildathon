@@ -72,7 +72,6 @@ p:where(.astro-SHWXRD6L):not(.buttons) {
 }
 
 #home {
-    background-image: url(/images/backgrounds/bg-hero.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
